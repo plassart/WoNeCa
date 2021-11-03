@@ -1,0 +1,59 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#jsn-gotoplink,
+.page-header,
+.subheading-category,
+#jsn-pos-mainmenu a,
+#jsn-pos-mainmenu span,
+.componentheading,
+.contentheading,
+.jsn-title-content-top-demo,
+.breadcrumbs,
+a.link-button,
+#jsn-pos-breadcrumbs,
+ul.menu-topmenu li a {
+	font-family: "Fjalla One", Georgia, serif;
+}
+body.jsn-textstyle-business ul.menu-mainmenu > li > a {
+	font-weight: normal;
+	text-transform:uppercase;
+	font-size:1.2em;
+}
+body.jsn-textstyle-business a.link-button {
+	font-weight:normal;
+	text-transform:uppercase;
+	font-size:1em;
+	padding:7px 20px;
+}
+body.jsn-textstyle-business .jsn-moduletitle {
+	font-size: 1.3em;
+	font-weight: normal;
+	text-transform:uppercase;
+}
+body.jsn-textstyle-business .contentheading,
+body.jsn-textstyle-business .componentheading,
+body.jsn-textstyle-business .subheading {
+	text-transform:uppercase;
+	color:#333;
+}
+body.jsn-textstyle-business #jsn-pos-breadcrumbs{
+	font-size:1.1em;
+}
+body.jsn-textstyle-business #jsn-pos-breadcrumbs span.breadcrumbs span.current {
+	font-weight:normal;
+}

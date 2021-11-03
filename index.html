@@ -1,891 +1,873 @@
-<!DOCTYPE html>
-<!-- saved from url=(0038)https://disco.cs.uni-kl.de/woneca-2020 -->
-<html lang="*" dir="ltr" slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- <base href="https://disco.cs.uni-kl.de/woneca-2020"><base href="."> -->
-    <meta name="author" content="Steffen Bondorf">
-    <meta name="description" content="We are the distributed computer systems lab at the department of computer science at the University of Kaiserslautern.">
-    <meta name="generator" content="Joomla! - Open Source Content
-				    Management">
-    <title>WoNeCa 2022</title>
-    <!--<link href="https://disco.cs.uni-kl.de/templates/jsn_sky_pro/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">-->
-    <link href="WoNeCa_2020_files/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/bootstrap-extended.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/bootstrap-frontend.min.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/bootstrap-responsive-frontend.min.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/system.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/general.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/template.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/template_pro.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/red.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/business.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/jsn_wide.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/jsn_mobile.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/custom.css" rel="stylesheet" type="text/css">
-    <link href="WoNeCa_2020_files/modal.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-      div.jsn-modulecontainer ul.menu-mainmenu ul,
-      div.jsn-modulecontainer ul.menu-mainmenu ul li {
-	  width: 200px;
-      }
-      div.jsn-modulecontainer ul.menu-mainmenu li.jsn-submenu-flipback ul ul {
-	  right: 201px;
-      }
-      div.jsn-modulecontainer ul.menu-mainmenu ul ul {
-	  margin-left: 201px;
-	  margin-left: 200px\9;
-      }
-      #jsn-pos-toolbar div.jsn-modulecontainer ul.menu-mainmenu ul ul {
-	  margin-right: 201px;
-	  margin-left : auto
-      }
-      div.jsn-modulecontainer ul.menu-sidemenu ul,
-      div.jsn-modulecontainer ul.menu-sidemenu ul li {
-	  width: 200px;
-      }
-      div.jsn-modulecontainer ul.menu-sidemenu li ul {
-	  right: -200px;
-      }
-      body.jsn-direction-rtl div.jsn-modulecontainer ul.menu-sidemenu li ul {
-	  left: -200px;
-	  right: auto;
-      }
-      div.jsn-modulecontainer ul.menu-sidemenu ul ul {
-	  margin-left: 199px;
-      }
-    </style>
-    <script type="application/json" class="joomla-script-options new">{"csrf.token":"4a4becddb8c5da0a76f6dd564d7a68d9","system.paths":{"root":"","base":""}}</script>
-    <script src="WoNeCa_2020_files/jquery.min.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/jquery-noconflict.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/jquery-migrate.min.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/bootstrap.min.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/caption.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/mootools-core.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/core.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/mootools-more.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/noconflict.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/utils.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/jsn_template.js" type="text/javascript"></script>
-    <script src="WoNeCa_2020_files/modal.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      jQuery(function($){ $(".dropdown-toggle").dropdown(); });
-      jQuery(window).on('load',  function() {
-	  new JCaption('img.caption');
-      });
-      JSNTemplate.initTemplate({
-	  templatePrefix			: "jsn_sky_pro_",
-	  templatePath			: "/templates/jsn_sky_pro",
-	  enableRTL				: 0,
-	  enableGotopLink			: 1,
-	  enableMobile			: 1,
-	  enableMobileMenuSticky	: 1,
-	  enableDesktopMenuSticky	: 0,
-	  responsiveLayout		: ["mobile","wide"],
-	  mobileMenuEffect		: "default"
-      });
-      
-      jQuery(function($) {
-	  SqueezeBox.initialize({});
-	  initSqueezeBox();
-	  $(document).on('subform-row-add', initSqueezeBox);
-
-	  function initSqueezeBox(event, container)
-	  {
-	      SqueezeBox.assign($(container || document).find('a.modal').get(), {
-		  parse: 'rel'
+	<!DOCTYPE html>
+	<!-- saved from url=(0038)https://disco.cs.uni-kl.de/woneca-2020 -->
+	<html lang="*" dir="ltr" slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <!-- <base href="https://disco.cs.uni-kl.de/woneca-2020"><base href="."> -->
+	    <meta name="author" content="Steffen Bondorf">
+	    <meta name="description" content="We are the distributed computer systems lab at the department of computer science at the University of Kaiserslautern.">
+	    <meta name="generator" content="Joomla! - Open Source Content Management">
+	    <title>WoNeCa 2022</title>
+	    <!--<link href="https://disco.cs.uni-kl.de/templates/jsn_sky_pro/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">-->
+	    <link href="WoNeCa_2020_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/bootstrap-extended.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/bootstrap-frontend.min.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/bootstrap-responsive-frontend.min.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/system.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/general.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/template.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/template_pro.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/red.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/business.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/jsn_wide.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/jsn_mobile.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/custom.css" rel="stylesheet" type="text/css">
+	    <link href="WoNeCa_2020_files/modal.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+	      div.jsn-modulecontainer ul.menu-mainmenu ul,
+	      div.jsn-modulecontainer ul.menu-mainmenu ul li {
+		  width: 200px;
+	      }
+	      div.jsn-modulecontainer ul.menu-mainmenu li.jsn-submenu-flipback ul ul {
+		  right: 201px;
+	      }
+	      div.jsn-modulecontainer ul.menu-mainmenu ul ul {
+		  margin-left: 201px;
+		  margin-left: 200px\9;
+	      }
+	      #jsn-pos-toolbar div.jsn-modulecontainer ul.menu-mainmenu ul ul {
+		  margin-right: 201px;
+		  margin-left : auto
+	      }
+	      div.jsn-modulecontainer ul.menu-sidemenu ul,
+	      div.jsn-modulecontainer ul.menu-sidemenu ul li {
+		  width: 200px;
+	      }
+	      div.jsn-modulecontainer ul.menu-sidemenu li ul {
+		  right: -200px;
+	      }
+	      body.jsn-direction-rtl div.jsn-modulecontainer ul.menu-sidemenu li ul {
+		  left: -200px;
+		  right: auto;
+	      }
+	      div.jsn-modulecontainer ul.menu-sidemenu ul ul {
+		  margin-left: 199px;
+	      }
+	    </style>
+	    <script type="application/json" class="joomla-script-options new">{"csrf.token":"4a4becddb8c5da0a76f6dd564d7a68d9","system.paths":{"root":"","base":""}}</script>
+	    <script src="WoNeCa_2020_files/jquery.min.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/jquery-noconflict.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/jquery-migrate.min.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/bootstrap.min.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/caption.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/mootools-core.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/core.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/mootools-more.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/noconflict.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/utils.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/jsn_template.js" type="text/javascript"></script>
+	    <script src="WoNeCa_2020_files/modal.js" type="text/javascript"></script>
+	    <script type="text/javascript">
+	      jQuery(function($){ $(".dropdown-toggle").dropdown(); });
+	      jQuery(window).on('load',  function() {
+		  new JCaption('img.caption');
 	      });
-	  }
-      });
+	      JSNTemplate.initTemplate({
+		  templatePrefix			: "jsn_sky_pro_",
+		  templatePath			: "/templates/jsn_sky_pro",
+		  enableRTL				: 0,
+		  enableGotopLink			: 1,
+		  enableMobile			: 1,
+		  enableMobileMenuSticky	: 1,
+		  enableDesktopMenuSticky	: 0,
+		  responsiveLayout		: ["mobile","wide"],
+		  mobileMenuEffect		: "default"
+	      });
+	      
+	      jQuery(function($) {
+		  SqueezeBox.initialize({});
+		  initSqueezeBox();
+		  $(document).on('subform-row-add', initSqueezeBox);
 
-      window.jModalClose = function () {
-	  SqueezeBox.close();
-      };
+		  function initSqueezeBox(event, container)
+		  {
+		      SqueezeBox.assign($(container || document).find('a.modal').get(), {
+			  parse: 'rel'
+		      });
+		  }
+	      });
 
-      // Add extra modal close functionality for tinyMCE-based editors
-      document.onreadystatechange = function () {
-	  if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
-	  {
-	      if (typeof window.jModalClose_no_tinyMCE === 'undefined')
-	      {
-		  window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+	      window.jModalClose = function () {
+		  SqueezeBox.close();
+	      };
 
-		  jModalClose = function () {
-		      if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
-		      tinyMCE.activeEditor.windowManager.close();
-		  };
-	      }
+	      // Add extra modal close functionality for tinyMCE-based editors
+	      document.onreadystatechange = function () {
+		  if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+		  {
+		      if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+		      {
+			  window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
 
-	      if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
-	      {
-		  if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
-		  window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+			  jModalClose = function () {
+			      if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+			      tinyMCE.activeEditor.windowManager.close();
+			  };
+		      }
 
-		  SqueezeBox.close = function () {
-		      if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
-		      tinyMCE.activeEditor.windowManager.close();
-		  };
-	      }
-	  }
-      };
-      
-      jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+		      if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+		      {
+			  if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+			  window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
 
-    <!-- html5.js and respond.min.js for IE less than 9 -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="/plugins/system/jsntplframework/assets/3rd-party/respond/respond.min.js"></script>
-    <![endif]-->
-     </head>
-  <body id="jsn-master" class="jsn-textstyle-business jsn-color-red jsn-direction-ltr jsn-responsive jsn-mobile jsn-joomla-30  jsn-com-content jsn-view-article jsn-itemid-1692" style="">
-    <a name="top" id="top"></a>
-    <div id="jsn-page">
-      <div id="jsn-header">
-        <div id="jsn-headerright"><div id="jsn-headerright-inner">
-            <div id="jsn-pos-top" class="pull-right">
-              <div id="jsn-pos-top_inner">
-                
-              </div>
-            </div>
-            <div class="clearbreak"></div>
-          </div>
+			  SqueezeBox.close = function () {
+			      if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+			      tinyMCE.activeEditor.windowManager.close();
+			  };
+		      }
+		  }
+	      };
+	      
+	      jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
+	    </script>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+
+	    <!-- html5.js and respond.min.js for IE less than 9 -->
+	    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <script src="/plugins/system/jsntplframework/assets/3rd-party/respond/respond.min.js"></script>
+	    <![endif]-->
+	     </head>
+	  <body id="jsn-master" class="jsn-textstyle-business jsn-color-red jsn-direction-ltr jsn-responsive jsn-mobile jsn-joomla-30  jsn-com-content jsn-view-article jsn-itemid-1692" style="">
+	    <a name="top" id="top"></a>
+	    <div id="jsn-page">
+	      <div id="jsn-header">
+	        <div id="jsn-headerright"><div id="jsn-headerright-inner">
+	            <div id="jsn-pos-top" class="pull-right">
+	              <div id="jsn-pos-top_inner">
+	                
+	              </div>
+	            </div>
+	            <div class="clearbreak"></div>
+	          </div>
+		</div>
+
+
+
+		<!-- Header bar -->
+	            <div id="jsn-menu" class="pull-right">
+	              <div id="jsn-pos-mainmenu">
+	                <div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><h3 class="jsn-moduletitle"><span class="jsn-moduleicon no-text"></span></h3><div class="jsn-modulecontent"><span class="jsn-menu-toggle">Menu</span>
+			      <ul class="menu-mainmenu">
+				<li class="jsn-menu-mobile-control"><span class="close-menu"><i class="fa fa-times"></i></span></li> 
+				<li class="first jsn-icon-home"><a class="clearfix" href="#TheWorkshop">
+				    <i class="jsn-icon-home "></i>	<span>
+				      <span class="jsn-menutitle">Woneca2022</span>
+				</a></li><li class="parent"><a class="clearfix" href="#WorkshopOrganizers">
+				    <span>
+				      <span class="jsn-menutitle">Organizers</span>
+				</a></li><li class="parent"><a class="clearfix" href="#CallForPresentations">
+				    <span>
+				      <span class="jsn-menutitle">Call for Presentations</span>
+				</a></li><li class="parent"><a class="clearfix" href="#EventOrganization">
+				    <span>
+				      <span class="jsn-menutitle">Event Organization</span>
+				</a></li><li class="parent"><a class="clearfix" href="#EventInstructions">
+				    <span>
+				      <span class="jsn-menutitle">Event Instructions</span>
+				</a></li><li class="parent"><a class="clearfix" href="#ImportantDates">
+				    <span>
+				      <span class="jsn-menutitle">Dates</span>
+				</a></li><li class="parent"><a class="clearfix" href="#Registration">
+				    <span>
+				      <span class="jsn-menutitle">Registration</span>
+				</a></li><li class="parent"><a class="clearfix" href="#Program">
+				    <span>
+				      <span class="jsn-menutitle">Program</span>
+				</a></li><li class="parent"><a class="clearfix" href="#TopicOfInterest">
+				    <span>
+				      <span class="jsn-menutitle">Topic of Interest</span>
+				</a></li><li class="parent"><a class="clearfix" href="#Access">
+				    <span>
+				      <span class="jsn-menutitle">Access</span>
+				      <div class="clearbreak"></div></div></div></div>
+	              </div>
+	              <span id="jsn-desktopswitch">
+	                <a href="https://disco.cs.uni-kl.de/woneca-2020#" onclick="javascript: JSNUtils.setTemplateAttribute(&#39;jsn_sky_pro_&#39;,&#39;mobile&#39;,&#39;no&#39;); return false;"></a>
+	              </span>
+	              <span id="jsn-mobileswitch">
+	                <a href="https://disco.cs.uni-kl.de/woneca-2020#" onclick="javascript: JSNUtils.setTemplateAttribute(&#39;jsn_sky_pro_&#39;,&#39;mobile&#39;,&#39;yes&#39;); return false;"></a>
+	              </span>
+	            </div>
+	            <div class="clearbreak"></div>
+	          </div>
+	        </div>
+	      </div>
+	      <div id="jsn-body">
+		<!-- -->
+	        <div id="jsn-content" class="jsn-hasleft ">
+	          <div id="jsn-content_inner" style="right: 76.9231%;"><div id="jsn-content_inner1" style="left: 76.9231%;"><div id="jsn-content_inner2"><div id="jsn-content_inner3"><div id="jsn-content_inner4"><div id="jsn-content_inner5"><div id="jsn-content_inner6"><div id="jsn-content_inner7" class="row-fluid">
+	                          <div id="jsn-maincontent" class="span9 order2 offset3 row-fluid">
+	                            <div id="jsn-centercol" class="span12 order1 ">
+	                              <div id="jsn-centercol_inner">
+	                                <div id="jsn-breadcrumbs">
+	                                  <div id="jsn-pos-breadcrumbs" class="">
+					    <ul class="breadcrumb ">
+					      <!-- <li><a href="https://disco.cs.uni-kl.de/index.php"
+							  class="pathway">Home</a></li><li><span class="divider"></span><span>WoNeCa
+						  2022</span></li></ul> -->
+					    <li>	<h2 itemprop="headline">
+						6th Workshop on Network Calculus (WoNeCa-6)	</h2></li></ul>
+	</div>
+	</div>
+	<div id="jsn-mainbody-content" class=" jsn-hasmainbody">
+	  <div id="jsn-mainbody">
+	    <div id="system-message-container">
+	    </div>
+
+	    <div class="item-page" itemscope="" itemtype="http://schema.org/Article">	
+	      <meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://google.com/article">
+	      <meta itemprop="inLanguage" content="en-GB">
+	      <!--      <div class="page-header">
+		<h2 itemprop="headline"> 6th
+		  Workshop on Network Calculus
+		  (WoNeCa-6)
+		</h2>
+	      </div>
+	      -->  
+	      <div itemprop="articleBody">
+		<h1><span style="font-size:
+				 14pt;">[WoNeCa-6]&nbsp;In-person
+		    Event on 8th-9th September 2022</span></h1>
+
+		<!-- <h3>News</h3> -->
+		<!--
+		<ul>
+		  <li><span style="font-size: 12pt;"><strong>New Network Calculus Mailing List Available:</strong>&nbsp;see&nbsp;<a href="https://lists.geant.org/sympa/info/netcal-list">https://lists.geant.org/sympa/info/netcal-list</a></span></li>
+		</ul>
+		-->
+		<!--
+
+		<table style="width: 836px;">
+		  <tbody>
+		    <tr style="height: 212px;">
+		      <td style="width: 332.015625px; height: 212px;"><a href="https://disco.cs.uni-kl.de/woneca-2020#BestPres" rel="alternate"><img src="./WoNeCa 2020_files/WoNeCa-Best_Presentation_Award_small.png" alt="Best Presentation Awardee Paul Nikolaus" width="320" height="208"></a></td>
+		      <td style="width: 499.984375px; height: 212px;">
+			<ul>
+			  <li><span style="color: #000000;">Slides of all presentations are starting to become available online</span></li>
+			</ul>
+			<ul>
+			  <li><span style="color: #000000;">The community has chosen: <a href="https://people.epfl.ch/hossein.tabatabaee" target="_blank" rel="noopener noreferrer">Seyed Mohammadhossein Tabatabaee</a>&nbsp;won the <a href="https://disco.cs.uni-kl.de/woneca-2020#BestPres" rel="alternate">Best Presentation Award</a>.&nbsp;<br>Congratulations!</span></li>
+			</ul>
+		      </td>
+		    </tr>
+		  </tbody>
+		</table>
+		-->
+		<h3 id="TheWorkshop">The Workshop</h3>
+		<p>The network calculus has established as a versatile methodology for the queueing analysis of resource sharing based systems. Its prospect is that it can deal with problems that are fundamentally hard for alternative methodologies, based on the fact that it works with bounds rather than striving for exact solutions. The high modeling power of the network calculus has been transposed into several important applications for network engineering problems, traditionally in the Internet’s Quality of Service proposals IntServ and DiffServ, and more recently in diverse environments such as wireless sensor networks, switched Ethernets, or Systems-on-Chip.</p>
+		<p>The goal of this workshop is to bring together researchers with an interest in the theory of network calculus as well as those who want to apply existing results in new applications. The workshop will serve to promote the network calculus theory to researchers with an interest in applied queueing models for data communication.</p>
+		<!-- Schedule:
+		<p><b>Schedule&nbsp;(all times given in Central European Summer Time, UTC+02:00)</b></p>
+		<table class="cool" style="width: 828px;">
+		  <tbody>
+		    <tr>
+		      <td style="width: 74.0625px;">08:35-08:45</td>
+		      <td style="width: 739.9375px;">Opening</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">08:45-10:25</td>
+		      <td style="width: 739.9375px;">Session 1: TSN</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Luxi Zhao (TUM): Using Network Calculus to Improve End-to-End Latency Upper Bound of Multiple Classes of AVB Traffic in TSN Networks</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Lisa Maile (FAU): An Introduction to Network Calculus Results for&nbsp;Time-Sensitive Networks [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/WoNeCa_2020_maile.pdf" target="_blank" rel="noopener noreferrer">slides</a>]&nbsp;[<a href="https://youtu.be/5HjMWDmnzhE" target="_blank" rel="noopener noreferrer">video</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Ludovic Thomas (EPFL): On Time Synchronization Issues in Time-Sensitive Networks with Regulators and Nonideal Clocks [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Ludovic_tsn-lt-jylb-on-time-sync-issues.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Jonathan Falk (U Stuttgart): Network Calculus for systems with time-triggered service intermittence</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">10:25-10:40</td>
+		      <td style="width: 739.9375px;">Coffee Break</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">10:40-11:55</td>
+		      <td style="width: 739.9375px;">Session 2:&nbsp;Bounds and Networks I</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Jiayi Zhang (Huawei): Using Network Calculus in High Quality IP Network [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Jiayi_Towards%20a%20high-quality%20IP%20network-20201009.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Hao Wang (Dalian UT): Data Center Network Calculus</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Anne Bouillard (Huawei): Trade-off between accuracy and tractability of network calculus in FIFO networks&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Anne_fifo-slides.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">11:55-13:00</td>
+		      <td style="width: 739.9375px;">Lunch Break</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">13:00-14:15</td>
+		      <td style="width: 739.9375px;">Session 3:&nbsp;Bounds and Networks II</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Ehsan Mohammadpour (EPFL):&nbsp;Improved Delay Bound for a Service Curve Element with Known Transmission Rate</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Raffaele Zippo (uniPi):&nbsp;Algebraic transformations for network paths with hop-by-hop flow control&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Zippo_Algebraic-transformations-for-network-paths-with-hop-by-hop-flow.pdf" target="_blank" rel="noopener noreferrer">slides</a>]&nbsp;[<a href="https://youtu.be/eEwXGucKXuk" target="_blank" rel="noopener noreferrer">video</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Isaac Howenstine (Lehigh U):&nbsp;Converting Non-feedforward Networks to Feedforward for Network Calculus</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">14:15-14:25</td>
+		      <td style="width: 739.9375px;">Coffee Break</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">14:25-15:15</td>
+		      <td style="width: 739.9375px;">Session 4:&nbsp;Deterministic Modeling and Analysis</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Georg Carle (TUM):&nbsp;Measurement-based Network Calculus Modelling of Programmable Network Components implemented in P4</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Marc Boyer (ONERA):&nbsp;Formalization of relations between cumulative curves and event streams: from network calculus to CPA, and back&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Slides-Boyer-Woneca-2020.pdf" target="_blank" rel="noopener noreferrer">slides</a>] [<a href="https://www.onera.fr/sites/default/files/323/WoNeCa-2020-Boyer-NC-CPA.mp4_.zip" target="_blank" rel="noopener noreferrer">video, zip download</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">15:15-15:20</td>
+		      <td style="width: 739.9375px;">Short Break</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">15:20-16:35</td>
+		      <td style="width: 739.9375px;">Session 5: Schedulers &amp; SNC</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Jörg Liebeherr (U of T):&nbsp;Hierarchical Fair Scheduling: A Reality Check [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Jorg_WoNeCa-2020v3-tmp4.pdf" target="_blank" rel="noopener noreferrer">slides</a>]&nbsp;[<a href="https://play.library.utoronto.ca/7d1db334b891c0350ff61f5ad46543a9" target="_blank" rel="noopener noreferrer">video</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;"><a id="BestPres"></a>Seyed Mohammadhossein Tabatabaee (EPFL):&nbsp;Interleaved Weighted Round Robin: a tight, strict residual service curve&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/IWRR_Presentation_WoNeCa.pdf" target="_blank" rel="noopener noreferrer">slides</a>] [<a href="https://drive.switch.ch/index.php/s/zC51nuqtelZ7b19" target="_blank" rel="noopener noreferrer">video</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Paul Nikolaus (TUK):&nbsp;Dealing with Dependence in Stochastic Network Calculus -- Using Independence as a Bound [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Paul_presentation_WoNeCa_2020.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">16:35-16:45</td>
+		      <td style="width: 739.9375px;">Coffee Break</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">16:45-18:25</td>
+		      <td style="width: 739.9375px;">Session 6: SNC &amp; Wireless</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Jaya Prakash Varma Champati (KTH): Statistical Guarantee Optimization for AoI in Single-Hop and Two-Hop Systems with Periodic Arrivals&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Jaya_Champati_WoNeCa2020.pdf" target="_blank" rel="noopener noreferrer">slides</a>]&nbsp;[<a href="https://drive.google.com/file/d/1sMHNiWsAcPCpJUcVUMQlxFtroWWpXH8n/view" target="_blank" rel="noopener noreferrer">video</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Sami Akin (U Hannover):&nbsp;On the energy and data storage management in energy harvesting wireless communications</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Orangel Azuaje Contreras (U Porto): Delay Guarantees of a Realistic WiFi-based First Responder Ad-Hoc Network</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">&nbsp;</td>
+		      <td style="width: 739.9375px;">Florin Ciucu (U Warwick): Two Extensions of Kingman's GI/G/1 Bound [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/ciucu_woneca20.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 74.0625px;">18:25-18:35</td>
+		      <td style="width: 739.9375px;">Closing &amp; Best presentation Award</td>
+		    </tr>
+		  </tbody>
+		</table>
+
+		-->
+
+		<!-- Virtual event
+		<h3>Virtual Event Instructions</h3>
+		<p><strong>We will conduct the virtual event via Zoom.&nbsp;The meeting invitation been sent on&nbsp;October 07. If you have not received the link, please contact Amr (<span id="cloak566174287338f2f80e6dbb37e878df21"><a href="mailto:amr.rizk@uni-ulm.de">amr.rizk@uni-ulm.de</a></span><script type="text/javascript">
+		      document.getElementById('cloak566174287338f2f80e6dbb37e878df21').innerHTML = '';
+		      var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+		      var path = 'hr' + 'ef' + '=';
+		      var addy566174287338f2f80e6dbb37e878df21 = '&#97;mr.r&#105;zk' + '&#64;';
+		      addy566174287338f2f80e6dbb37e878df21 = addy566174287338f2f80e6dbb37e878df21 + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';
+		      var addy_text566174287338f2f80e6dbb37e878df21 = '&#97;mr.r&#105;zk' + '&#64;' + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';document.getElementById('cloak566174287338f2f80e6dbb37e878df21').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy566174287338f2f80e6dbb37e878df21 + '\'>'+addy_text566174287338f2f80e6dbb37e878df21+'<\/a>';
+		    </script>).</strong></p>
+		<p>While we plan to&nbsp;have live presentations using&nbsp;Zoom's screen sharing feature, we also ask presenters to provide&nbsp;a recording&nbsp;to be played in case of technical problems. All presenters should have received an email by Amr with instructions and&nbsp;the upload link. If you have not received an email, please contact Amr (<span id="cloak98257688bbce4839d8d216a290ad33db"><a href="mailto:amr.rizk@uni-ulm.de">amr.rizk@uni-ulm.de</a></span><script type="text/javascript">
+		    document.getElementById('cloak98257688bbce4839d8d216a290ad33db').innerHTML = '';
+		    var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+		    var path = 'hr' + 'ef' + '=';
+		    var addy98257688bbce4839d8d216a290ad33db = '&#97;mr.r&#105;zk' + '&#64;';
+		    addy98257688bbce4839d8d216a290ad33db = addy98257688bbce4839d8d216a290ad33db + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';
+		    var addy_text98257688bbce4839d8d216a290ad33db = '&#97;mr.r&#105;zk' + '&#64;' + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';document.getElementById('cloak98257688bbce4839d8d216a290ad33db').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy98257688bbce4839d8d216a290ad33db + '\'>'+addy_text98257688bbce4839d8d216a290ad33db+'<\/a>';
+		  </script>).</p>
+		-->
+
+		<h3 id="WorkshopOrganizers">Workshop Organizers</h3>
+		<p>Jean-Yves Le Boudec, EPFL, SWI</p>
+		<p>Steffen Bondorf, Ruhr University Bochum, GER</p>
+		<p>Amr Rizk, Ulm University, GER</p>
+		<p>Markus Fidler, Leibniz University Hannover, GER</p>
+		<p>Jens Schmitt, TU&nbsp;Kaiserslautern, GER</p>
+
+		<h3 id="EventOrganization">Event Organizations</h3>
+		<p>Slot for every talk is 25 min = 20min talk + 5min Q&amp;A</p>
+		<p>The best presentation will be awarded with a price! Voting will be anonymous and will take place during the closing session.</p>
+		<p>Social Events on Thursday evening with dinner cruise on Lake Geneva and also on Friday afternoon (TBA)</p>
+		<p> TBA </p>
+
+		<h3 id="EventInstructions">Event Instructions</h3>
+		<p> TBA </p>
+
+		
+		<h3 id="CallForPresentations"><span>Call for Presentations</span></h3>
+		<p><span style="line-height: normal; text-align: -webkit-auto;"> The idea is to	have an informal meeting with presentations of recent work in the context of network calculus (theory,applications, tool support) and gather as many network calculus experts as possible to discuss about the future development of the theory and its application opportunities. Hence, there are no written papers and everyone can present his/her "hottest" recent research on network calculus.</span></p>
+		<p>If you like to present then please send:
+		  <ol>
+		    <li>The title of your presentation</li>
+		    <li> <strong> And </strong> the name of the presenter in an email to 
+		    </li>
+		  </ol>
+		<p>TBD <span id="cloak3904acb452e953966379c250ccd7bd0a"><a href="mailto:amr.rizk@uni-ulm.de">amr.rizk@uni-ulm.de</a></span><script type="text/javascript">
+		    document.getElementById('cloak3904acb452e953966379c250ccd7bd0a').innerHTML = '';
+		    var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+		    var path = 'hr' + 'ef' + '=';
+		    var addy3904acb452e953966379c250ccd7bd0a = '&#97;mr.r&#105;zk' + '&#64;';
+		    addy3904acb452e953966379c250ccd7bd0a = addy3904acb452e953966379c250ccd7bd0a + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';
+		    var addy_text3904acb452e953966379c250ccd7bd0a = '&#97;mr.r&#105;zk' + '&#64;' + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';document.getElementById('cloak3904acb452e953966379c250ccd7bd0a').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy3904acb452e953966379c250ccd7bd0a + '\'>'+addy_text3904acb452e953966379c250ccd7bd0a+'<\/a>';													    </script> AND<br> <span id="cloak538020b5cf1010a4a54bd157665b4ff6"><a href="mailto:steffen.bondorf@ruhr-uni-bochum.de">steffen.bondorf@ruhr-uni-bochum.de</a></span><script type="text/javascript">
+		    document.getElementById('cloak538020b5cf1010a4a54bd157665b4ff6').innerHTML = '';
+		    var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+		    var path = 'hr' + 'ef' + '=';
+		    var addy538020b5cf1010a4a54bd157665b4ff6 = 'st&#101;ff&#101;n.b&#111;nd&#111;rf' + '&#64;';
+		    addy538020b5cf1010a4a54bd157665b4ff6 = addy538020b5cf1010a4a54bd157665b4ff6 + 'r&#117;hr-&#117;n&#105;-b&#111;ch&#117;m' + '&#46;' + 'd&#101;';
+		    var addy_text538020b5cf1010a4a54bd157665b4ff6 = 'st&#101;ff&#101;n.b&#111;nd&#111;rf' + '&#64;' + 'r&#117;hr-&#117;n&#105;-b&#111;ch&#117;m' + '&#46;' + 'd&#101;';document.getElementById('cloak538020b5cf1010a4a54bd157665b4ff6').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy538020b5cf1010a4a54bd157665b4ff6 + '\'>'+addy_text538020b5cf1010a4a54bd157665b4ff6+'<\/a>';</script></p>
+		<p>In case of contention, presentations will be selected based on topical coherence.</p>
+
+
+		<h3 id="ImportantDates">Important Dates</h3>
+		<p style="font-size: 13px;
+			  color: #000000; font-family:
+			  Helvetica; line-height:
+			  normal;"><span style="font-family:
+						tahoma, arial, helvetica,
+						sans-serif; font-size: 9pt;
+						color: #333333;">Submission of
+		    presentation title and
+		    abstract: <span>
+		      <!--style="text-decoration:
+		      line-through;"--> <strong>
+			June 10th, 2022 </strong> </span><!--&nbsp;<span style="text-decoration: line-through;">January 14, 2020</span> (extended, passed)</span>--></p>
+		<p style="font-size: 13px; color: #000000; font-family: Helvetica; line-height: normal;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 9pt; color: #333333;">Notification of invitation for presentation: <span> <!--style="text-decoration: line-through;"-->July 1st, 2022</span><!--&nbsp;<span style="text-decoration: line-through;">January 19, 2020</span> (extended, passed)</span>--></p>
+		<p style="font-size: 13px; color: #000000; font-family:
+		Helvetica; line-height: normal;"><span style="font-size: 9pt;
+		color: #333333;"><span style="font-family: tahoma, arial,
+		helvetica, sans-serif;">Workshop date:
+		<!--<span style="text-decoration: line-through;">&nbsp;18,
+		2020</span>&nbsp;--><span> <!--style="text-decoration:
+		line-through;"--> <strong> September&nbsp;8th and 9th, 2022 </strong><!--</span> (extended)</span>--></span></p>
+
+
+		<!-- <h3>&nbsp;</h3> -->
+
+
+		<!--
+		<p>&nbsp;</p>
+		<h1><span style="font-size: 14pt;">[WoNeCa-5]&nbsp;Cancelled physical event in Saarbrücken (collocated with MMB 2020)</span></h1>
+		<p>Dear network calculus community,<br><br>In face of the outbreak of the coronavirus in Europe, we will have to&nbsp;cancel the current WoNeCa workshop dates. Safety and health of our&nbsp;participants is our highest concern. We plan to postpone WoNeCa-5 to&nbsp;safer times, potentially later this year. We are very sorry that we&nbsp;cannot meet as soon as planned and we will keep you up to date.<br><br>Please also note announcements&nbsp;of the MMB 2020 conference that intended to host our workshop: <a href="http://www.mmb2020.de/" target="_blank" rel="alternate noopener noreferrer">MMB 2020</a>.<br><br>Best regards,<br>Amr, Steffen, Markus and Jens</p>
+		-->	
+
+
+		<h3 id="Registration">Registration</h3>
+		<p>TBD</p>
+		<p>The workshop will integrated into the&nbsp;<a href="http://www.mmb2020.de/" target="_blank" rel="alternate noopener noreferrer">MMB 2020</a>&nbsp;conference.&nbsp;Registration details are available&nbsp;<a href="https://www.mmb2020.de/registration/">here</a>.<br>Note the early registration deadline: March 01.</p>
+
+
+		<h3 id="Program">Program</h3>
+		<p>TBD</p>
+		<!-- Program 
+		<p><b>Wednesday, March 18</b></p>
+		<table class="cool" style="width: 830px;">
+		  <tbody>
+		    <tr>
+		      <td style="width: 83.34375px;">08:30-09:00</td>
+		      <td style="width: 731.65625px;">Workshop Registration</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">09:00-10:00</td>
+		      <td style="width: 731.65625px;">
+			<p>WoNeCa Keynote by&nbsp;François Baccelli&nbsp;on Interference Networks [<a href="https://disco.cs.uni-kl.de/woneca-2020#Keynote">Abstract</a>] (Keynote is held together with MMB)</p>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">10:00-10:30</td>
+		      <td style="width: 731.65625px;">Coffee Break</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">10:30-12:35</td>
+		      <td style="width: 731.65625px;">Session 1: Bounds and Networks</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Anne Bouillard: Stability and performance bounds in cyclic networks</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Isaac Howenstine: Converting Non-feedforward Networks to Feedforward for Network Calculus</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Ehsan Mohammadpour: Improved Delay Bound for a Service Curve Element with Known Transmission Rate</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Raffaele Zippo: Algebraic transformations for network paths with hop-by-hop flow control</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Jiayi Zhang: Using Network Calculus in High Quality IP Network</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">12:35-14:00</td>
+		      <td style="width: 731.65625px;">Lunch</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">14:00-15:45</td>
+		      <td style="width: 731.65625px;">Session 2: TSN</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Luxi Zhao: Using Network Calculus to Improve End-to-End Latency Upper Bound of Multiple Classes of AVB Traffic in TSN Networks</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Lisa Maile: Shaper and Maximum Service Curves for TSN</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Ludovic Thomas: On Cyclic Dependencies and Regulators in Time-Sensitive Networks</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Jonathan Falk: Network Calculus for systems with time-triggered service intermittence</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">15:45-16:15</td>
+		      <td style="width: 731.65625px;">Coffee Break</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">16:15-17:35</td>
+		      <td style="width: 731.65625px;">Session 3: Stochastic Modeling and Analysis</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Florin Ciucu: Two Extensions of Kingman's GI/G/1 Bound&nbsp;<em>(updated)</em></td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Jaya Prakash Varma Champati: Statistical Guarantee Optimization for AoI in Single-Hop and Two-Hop Systems with Periodic Arrivals</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">&nbsp;</td>
+		      <td style="width: 731.65625px;">Paul Kühn: Performance Modeling of Generalized Fork-Join Problems by Task Graph Reductions</td>
+		    </tr>
+		    <tr>
+		      <td style="width: 83.34375px;">19:00 -<br> open end</td>
+		      <td style="width: 731.65625px;">WoNeCa Social Event at&nbsp;manin restaurant [<a href="https://www.manin.de/saarbruecken/" target="_blank" rel="noopener noreferrer">www</a>] [<a href="https://www.google.com/maps/place/manin+Saarbr%C3%BCcken/@49.2383393,6.9894008,15z/data=!4m5!3m4!1s0x0:0x6cd70e526df79bc!8m2!3d49.2383393!4d6.9894008" target="_blank" rel="noopener noreferrer">map</a>]</td>
+		    </tr>
+		  </tbody>
+		</table>
+		<p><strong>Thursday, March 19</strong></p>
+		<table class="cool">
+		  <tbody>
+		    <tr>
+		      <td>09:00-10:45</td>
+		      <td>Session 6: Schedulers &amp; SNC</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Jörg Liebeherr: Hierarchical Fair Scheduling: A Reality Check</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Seyed Mohammadhossein Tabatabaee: Interleaved Weighted Round Robin: a tight, strict residual service curve</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Paul Nikolaus: Dealing with Dependence in Stochastic Network Calculus - Using Independence as a Bound</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Hao Wang: Data Center Network Calculus</td>
+		    </tr>
+		    <tr>
+		      <td>10:45-11:15&nbsp;</td>
+		      <td>Coffee Break</td>
+		    </tr>
+		    <tr>
+		      <td>11:15-12:05</td>
+		      <td>Deterministic Modeling and Analysis</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Georg Carle: Measurement-based Network Calculus Modelling of Programmable Network Components implemented in P4</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Marc Boyer: Formalization of relations between cumulative curves and event streams: from network calculus to CPA, and back</td>
+		    </tr>
+		    <tr>
+		      <td>12:05-13:30</td>
+		      <td>Lunch</td>
+		    </tr>
+		    <tr>
+		      <td>13:30-14:45</td>
+		      <td>Session 5: Wireless</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Sami Akin: On the energy and data storage management in energy harvesting wireless communications</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Orangel Azuaje Contreras: Delay Guarantees of a Realistic WiFi-based First Responder Ad-Hoc Network</td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>Qiao Li: Network Calculus based Analysis on Traffic Scheduling at a WAIC Gateway Accessing through Fading Channels</td>
+		    </tr>
+		    <tr>
+		      <td>14:45-15:00</td>
+		      <td>Closing Session &amp; Best presentation award</td>
+		    </tr>
+		  </tbody>
+		</table>
+		-->
+		
+		<h3 id="Keynote">Keynote Abstract</h3>
+		<p> Do we do a keynote or not ? </p>
+		<!--
+		<p><strong>François Baccelli - Interference Networks</strong></p>
+		<p>This talk features networks of coupled processor sharing queues in the Euclidean space,<br>where customers arrive according to independent Poisson point processes at every queue,<br>are served, and then leave the network. The coupling is through service rates.<br>In any given queue, this rate is inversely proportional the interference seen by this queue,<br>which is determined by the load in neighboring queues, attenuated by some distance-based path-loss function.</p>
+		<p>The model is a discrete version of a spatial birth and death process where customers<br>arrive to the Euclidean space according to Poisson rain and leave it when they<br>have transferred an exponential file, assuming that the instantaneous rate of each transfer is<br>determined through information theory by the signal to interference and noise ratio experienced by the user.</p>
+		<p>The discrete and the continuous models will be discussed, both in finite and infinite domains.<br>The stability condition is identified. The minimal stationary regime is built<br>using coupling from the past techniques.</p>
+		<p>The mean queue size of this minimal stationary regime is determined in closed form using <br>the rate conservation principle of Palm calculus. Some bounds on the tail of latency <br>will be discussed.</p>
+		<p>In infinite domains, when the stability condition holds, for all bounded initial conditions,<br>there is weak convergence to this minimal stationary regime; however, there exist<br>initial conditions for which all queue sizes converge to infinity.</p>
+		<p>Joint work with S. Foss and
+		  A. Sankararaman</p> 	
+		-->
+
+	    	<h3 id="TopicOfInterest"> <!-- <span style="line-height: normal; text-align: -webkit-auto; font-size: 10pt;"><span style="line-height: 1.5; text-align: -webkit-auto;">-->Topics of Interest<!--</span></span>--></h3>
+		<p>The topics of this workshop are related to fundamental aspects as well as applications of network calculus. The following list of topics is non-exclusive:</p>
+		<table style="width: 739px;" cellpadding="10">
+		  <tbody>
+		    <tr>
+		      <td style="width: 493px;">
+			<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Deterministic and stochastic network calculus, e.g.</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>traffic and service models</li>
+			  <li>general topologies</li>
+			  <li>numerical tightness</li>
+			</ul>
+		      </td>
+		      <td style="width: 593px;" colspan="2">
+			<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Relation to other theories, e.g.,</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>queueing theory</li>
+			  <li>discrete event dynamic systems</li>
+			  <li>optimization</li>
+			</ul>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td style="width: 493px;">
+			<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Feedback systems, e.g.,</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>TCP network calculus</li>
+			  <li>window flow control</li>
+			  <li>retransmission-based systems</li>
+			</ul>
+		      </td>
+		      <td style="width: 593px;" colspan="2">
+			<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Loss systems, e.g.,</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>bounded queues</li>
+			  <li>wireless links</li>
+			</ul>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td style="width: 493px;">
+			<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Aggregate multiplexing, e.g.,</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>optimization-based approaches</li>
+			  <li>efficient algorithms</li>
+			  <li>stochastic case</li>
+			</ul>
+		      </td>
+		      <td style="width: 593px;" colspan="2">
+			<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Tool support, e.g.,</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>numerical problems</li>
+			  <li>numerical approximations</li>
+			  <li>implementation experience</li>
+			</ul>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td style="width: 493px;">
+			<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Data transformation, e.g.,</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>end-to-end analysis</li>
+			  <li>in-network processing</li>
+			  <li>network coding</li>
+			</ul>
+			<p>&nbsp;</p>
+		      </td>
+		      <td style="width: 245.453125px;">
+			<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">New applications, e.g.,</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>TSN, DetNet and 5G</li>
+			  <li>energy storage</li>
+			  <li>tactile internet</li>
+			  <li>cache networks</li>
+			  <li>real-time calculus</li>
+			</ul>
+		      </td>
+		      <td style="width: 347.546875px;">
+			<p>&nbsp;</p>
+			<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
+			  <li>avionic networks</li>
+			  <li>mission-critical networks</li>
+			  <li>the power grid</li>
+			  <li>wireless sensor networks</li>
+			  <li>cyber-physical systems</li>
+			</ul>
+		      </td>
+		    </tr>
+		  </tbody>
+		</table>
+		<h3 id="Access"> Access </h3>
+	    <p>TBD advise hotel, adresse ?</p>
+	    <p> Écublens (near Lausanne), Canton of Vaud, Switzerland,
+	      46°31′13″N 6°33′56″E </p>
+	    <br>
+	  </div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
 	</div>
 
 
+	<!--  2222   -->
+	<!-- In left side tabular -->			    
+	<div id="jsn-leftsidecontent" class="span3 order1 offset-12">
+	  <div id="jsn-leftsidecontent_inner">
+	    <div id="jsn-pos-left">
+	      <div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><div><div><h3 class="jsn-moduletitle"><span class="jsn-moduleicon"> 6th Workshop on Network Calculus
+			  (WoNeCa-6) <!-- In conjunction with MMB 2020--> </span></h3><div class="jsn-modulecontent">
+			<div>
+			  <!-- <p><strong> 6th Workshop on Network Calculus
+			  (WoNeCa-6) </strong> </p> <!-- 20th International
+			  GI/ITG Conference on “Measurement, Modelling and
+			  Evaluation of Computing Systems”.</p>-->
 
-	<!-- Header bar -->
-            <div id="jsn-menu" class="pull-right">
-              <div id="jsn-pos-mainmenu">
-                <div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><h3 class="jsn-moduletitle"><span class="jsn-moduleicon no-text"></span></h3><div class="jsn-modulecontent"><span class="jsn-menu-toggle">Menu</span>
-		      <ul class="menu-mainmenu">
-			<li class="jsn-menu-mobile-control"><span class="close-menu"><i class="fa fa-times"></i></span></li> 
-			<li class="first jsn-icon-home"><a class="clearfix" href="#TheWorkshop">
-			    <i class="jsn-icon-home "></i>	<span>
-			      <span class="jsn-menutitle">Woneca2022</span>
-			</a></li><li class="parent"><a class="clearfix" href="#WorkshopOrganizers">
-			    <span>
-			      <span class="jsn-menutitle">Organizers</span>
-			</a></li><li class="parent"><a class="clearfix" href="#CallForPresentations">
-			    <span>
-			      <span class="jsn-menutitle">Call for Presentations</span>
-			</a></li><li class="parent"><a class="clearfix" href="#EventOrganization">
-			    <span>
-			      <span class="jsn-menutitle">Event Organization</span>
-			</a></li><li class="parent"><a class="clearfix" href="#EventInstructions">
-			    <span>
-			      <span class="jsn-menutitle">Event Instructions</span>
-			</a></li><li class="parent"><a class="clearfix" href="#ImportantDates">
-			    <span>
-			      <span class="jsn-menutitle">Dates</span>
-			</a></li><li class="parent"><a class="clearfix" href="#Registration">
-			    <span>
-			      <span class="jsn-menutitle">Registration</span>
-			</a></li><li class="parent"><a class="clearfix" href="#Program">
-			    <span>
-			      <span class="jsn-menutitle">Program</span>
-			</a></li><li class="parent"><a class="clearfix" href="#TopicOfInterest">
-			    <span>
-			      <span class="jsn-menutitle">Topic of Interest</span>
-			</a></li><li class="parent"><a class="clearfix" href="#Access">
-			    <span>
-			      <span class="jsn-menutitle">Access</span>
-			      <div class="clearbreak"></div></div></div></div>
-              </div>
-              <span id="jsn-desktopswitch">
-                <a href="https://disco.cs.uni-kl.de/woneca-2020#" onclick="javascript: JSNUtils.setTemplateAttribute(&#39;jsn_sky_pro_&#39;,&#39;mobile&#39;,&#39;no&#39;); return false;"></a>
-              </span>
-              <span id="jsn-mobileswitch">
-                <a href="https://disco.cs.uni-kl.de/woneca-2020#" onclick="javascript: JSNUtils.setTemplateAttribute(&#39;jsn_sky_pro_&#39;,&#39;mobile&#39;,&#39;yes&#39;); return false;"></a>
-              </span>
-            </div>
-            <div class="clearbreak"></div>
-          </div>
-        </div>
-      </div>
-      <div id="jsn-body">
+	<!--<p><span> Important dates:
+	<p><span> <strong>September&nbsp;8-9, 2022</strong></span></p>
+	-->
+		<h3>Important Dates</h3>
+		<p style="font-size: 13px; color: #000000;
+		    font-family:Helvetica; line-height:
+		    normal;"><span style="font-family:tahoma, arial,
+		    helvetica,sans-serif; font-size: 9pt; color:
+		    #333333;">Submission of presentation title and
+		    abstract: </span>
+		    <span>June 10th, 2022</span></p>
+		<p style="font-size: 13px; color: #000000; font-family:
+		Helvetica; line-height: normal;"><span style="font-family:
+		tahoma, arial, helvetica, sans-serif; font-size: 9pt; color:
+		#333333;">Notification of invitation for presentation:</span><br>
+		    <span> July 1st, 2022</span></p>
+		<p style="font-size: 13px; color: #000000; font-family:
+		Helvetica; line-height: normal;"><span style="font-size: 9pt;
+		color: #333333; font-family: tahoma, arial,
+					      helvetica, sans-serif;">Workshop date: </span><br>
+		    <span style="color:red;"> <strong> September&nbsp;9th and
+		    9th, 2022 </strong> </span></p>
+
+
+	    <p><span> <!-- style="text-decoration:
+			  line-through;"--> <span style="color: #008000; font-size: large; <!-- text-decoration: line-through;-->"><strong>Lausanne</strong></span>&nbsp;(Switzerland)</span></p>
+			  <!-- <p>Please note updates regarding the <br>outbreak of Coronavirus&nbsp;in Europe on</p>
+			  <p><a href="http://www.mmb2020.de/" target="_blank"
+			  rel="alternate noopener
+			       noreferrer">http://www.mmb2020.de/</a></p>-->
+	</div>
+
+	<div class="clearbreak"> </div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!--  -->
+
+	<!--  2222   -->
+	<!-- At the bottom of the page -->
+	<div id="jsn-footer">
+	  <div id="jsn-footer_inner">
+	    <div id="jsn-footermodules" class="jsn-modulescontainer jsn-modulescontainer1 row-fluid">
+	      <div id="jsn-pos-footer">
+	        <div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><div class="jsn-modulecontent"><span class="jsn-menu-toggle">Menu</span>
+		      <div>
+			<p>Computer Communications and Applications Laboratory
+			2 -  <strong> LCA2 </strong> <br>
+			<p> Ecole Polytechnique federal de Lausanne -  <strong> EPFL </strong> </p>
+			<p> EPFL IC IINFCOM LCA2, BC 205 (Bâtiment BC), Station 14, CH-1015 Lausanne</p></br></div><div class="clearbreak"></div></div></div></div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	</div>
 	<!-- -->
-        <div id="jsn-content" class="jsn-hasleft ">
-          <div id="jsn-content_inner" style="right: 76.9231%;"><div id="jsn-content_inner1" style="left: 76.9231%;"><div id="jsn-content_inner2"><div id="jsn-content_inner3"><div id="jsn-content_inner4"><div id="jsn-content_inner5"><div id="jsn-content_inner6"><div id="jsn-content_inner7" class="row-fluid">
-                          <div id="jsn-maincontent" class="span9 order2 offset3 row-fluid">
-                            <div id="jsn-centercol" class="span12 order1 ">
-                              <div id="jsn-centercol_inner">
-                                <div id="jsn-breadcrumbs">
-                                  <div id="jsn-pos-breadcrumbs" class="">
-				    <ul class="breadcrumb ">
-				      <!-- <li><a href="https://disco.cs.uni-kl.de/index.php"
-						  class="pathway">Home</a></li><li><span class="divider"></span><span>WoNeCa
-					  2022</span></li></ul> -->
-				    <li>	<h2 itemprop="headline">
-					6th Workshop on Network Calculus (WoNeCa-6)	</h2></li></ul>
-</div>
-</div>
-<div id="jsn-mainbody-content" class=" jsn-hasmainbody">
-  <div id="jsn-mainbody">
-    <div id="system-message-container">
-    </div>
 
-    <div class="item-page" itemscope="" itemtype="http://schema.org/Article">	
-      <meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://google.com/article">
-      <meta itemprop="inLanguage" content="en-GB">
-      <!--      <div class="page-header">
-	<h2 itemprop="headline"> 6th
-	  Workshop on Network Calculus
-	  (WoNeCa-6)
-	</h2>
-      </div>
-      -->  
-      <div itemprop="articleBody">
-	<h1><span style="font-size:
-			 14pt;">[WoNeCa-6]&nbsp;In-person
-	    Event on 8th-9th September 2022</span></h1>
-
-	<!-- <h3>News</h3> -->
-	<!--
-	<ul>
-	  <li><span style="font-size: 12pt;"><strong>New Network Calculus Mailing List Available:</strong>&nbsp;see&nbsp;<a href="https://lists.geant.org/sympa/info/netcal-list">https://lists.geant.org/sympa/info/netcal-list</a></span></li>
-	</ul>
-	-->
-	<!--
-
-	<table style="width: 836px;">
-	  <tbody>
-	    <tr style="height: 212px;">
-	      <td style="width: 332.015625px; height: 212px;"><a href="https://disco.cs.uni-kl.de/woneca-2020#BestPres" rel="alternate"><img src="./WoNeCa 2020_files/WoNeCa-Best_Presentation_Award_small.png" alt="Best Presentation Awardee Paul Nikolaus" width="320" height="208"></a></td>
-	      <td style="width: 499.984375px; height: 212px;">
-		<ul>
-		  <li><span style="color: #000000;">Slides of all presentations are starting to become available online</span></li>
-		</ul>
-		<ul>
-		  <li><span style="color: #000000;">The community has chosen: <a href="https://people.epfl.ch/hossein.tabatabaee" target="_blank" rel="noopener noreferrer">Seyed Mohammadhossein Tabatabaee</a>&nbsp;won the <a href="https://disco.cs.uni-kl.de/woneca-2020#BestPres" rel="alternate">Best Presentation Award</a>.&nbsp;<br>Congratulations!</span></li>
-		</ul>
-	      </td>
-	    </tr>
-	  </tbody>
-	</table>
-	-->
-	<h3 id="TheWorkshop">The Workshop</h3>
-	<p>The network calculus has established as a versatile methodology for the queueing analysis of resource sharing based systems. Its prospect is that it can deal with problems that are fundamentally hard for alternative methodologies, based on the fact that it works with bounds rather than striving for exact solutions. The high modeling power of the network calculus has been transposed into several important applications for network engineering problems, traditionally in the Internet’s Quality of Service proposals IntServ and DiffServ, and more recently in diverse environments such as wireless sensor networks, switched Ethernets, or Systems-on-Chip.</p>
-	<p>The goal of this workshop is to bring together researchers with an interest in the theory of network calculus as well as those who want to apply existing results in new applications. The workshop will serve to promote the network calculus theory to researchers with an interest in applied queueing models for data communication.</p>
-	<!-- Schedule:
-	<p><b>Schedule&nbsp;(all times given in Central European Summer Time, UTC+02:00)</b></p>
-	<table class="cool" style="width: 828px;">
-	  <tbody>
-	    <tr>
-	      <td style="width: 74.0625px;">08:35-08:45</td>
-	      <td style="width: 739.9375px;">Opening</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">08:45-10:25</td>
-	      <td style="width: 739.9375px;">Session 1: TSN</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Luxi Zhao (TUM): Using Network Calculus to Improve End-to-End Latency Upper Bound of Multiple Classes of AVB Traffic in TSN Networks</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Lisa Maile (FAU): An Introduction to Network Calculus Results for&nbsp;Time-Sensitive Networks [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/WoNeCa_2020_maile.pdf" target="_blank" rel="noopener noreferrer">slides</a>]&nbsp;[<a href="https://youtu.be/5HjMWDmnzhE" target="_blank" rel="noopener noreferrer">video</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Ludovic Thomas (EPFL): On Time Synchronization Issues in Time-Sensitive Networks with Regulators and Nonideal Clocks [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Ludovic_tsn-lt-jylb-on-time-sync-issues.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Jonathan Falk (U Stuttgart): Network Calculus for systems with time-triggered service intermittence</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">10:25-10:40</td>
-	      <td style="width: 739.9375px;">Coffee Break</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">10:40-11:55</td>
-	      <td style="width: 739.9375px;">Session 2:&nbsp;Bounds and Networks I</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Jiayi Zhang (Huawei): Using Network Calculus in High Quality IP Network [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Jiayi_Towards%20a%20high-quality%20IP%20network-20201009.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Hao Wang (Dalian UT): Data Center Network Calculus</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Anne Bouillard (Huawei): Trade-off between accuracy and tractability of network calculus in FIFO networks&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Anne_fifo-slides.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">11:55-13:00</td>
-	      <td style="width: 739.9375px;">Lunch Break</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">13:00-14:15</td>
-	      <td style="width: 739.9375px;">Session 3:&nbsp;Bounds and Networks II</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Ehsan Mohammadpour (EPFL):&nbsp;Improved Delay Bound for a Service Curve Element with Known Transmission Rate</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Raffaele Zippo (uniPi):&nbsp;Algebraic transformations for network paths with hop-by-hop flow control&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Zippo_Algebraic-transformations-for-network-paths-with-hop-by-hop-flow.pdf" target="_blank" rel="noopener noreferrer">slides</a>]&nbsp;[<a href="https://youtu.be/eEwXGucKXuk" target="_blank" rel="noopener noreferrer">video</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Isaac Howenstine (Lehigh U):&nbsp;Converting Non-feedforward Networks to Feedforward for Network Calculus</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">14:15-14:25</td>
-	      <td style="width: 739.9375px;">Coffee Break</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">14:25-15:15</td>
-	      <td style="width: 739.9375px;">Session 4:&nbsp;Deterministic Modeling and Analysis</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Georg Carle (TUM):&nbsp;Measurement-based Network Calculus Modelling of Programmable Network Components implemented in P4</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Marc Boyer (ONERA):&nbsp;Formalization of relations between cumulative curves and event streams: from network calculus to CPA, and back&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Slides-Boyer-Woneca-2020.pdf" target="_blank" rel="noopener noreferrer">slides</a>] [<a href="https://www.onera.fr/sites/default/files/323/WoNeCa-2020-Boyer-NC-CPA.mp4_.zip" target="_blank" rel="noopener noreferrer">video, zip download</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">15:15-15:20</td>
-	      <td style="width: 739.9375px;">Short Break</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">15:20-16:35</td>
-	      <td style="width: 739.9375px;">Session 5: Schedulers &amp; SNC</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Jörg Liebeherr (U of T):&nbsp;Hierarchical Fair Scheduling: A Reality Check [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Jorg_WoNeCa-2020v3-tmp4.pdf" target="_blank" rel="noopener noreferrer">slides</a>]&nbsp;[<a href="https://play.library.utoronto.ca/7d1db334b891c0350ff61f5ad46543a9" target="_blank" rel="noopener noreferrer">video</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;"><a id="BestPres"></a>Seyed Mohammadhossein Tabatabaee (EPFL):&nbsp;Interleaved Weighted Round Robin: a tight, strict residual service curve&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/IWRR_Presentation_WoNeCa.pdf" target="_blank" rel="noopener noreferrer">slides</a>] [<a href="https://drive.switch.ch/index.php/s/zC51nuqtelZ7b19" target="_blank" rel="noopener noreferrer">video</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Paul Nikolaus (TUK):&nbsp;Dealing with Dependence in Stochastic Network Calculus -- Using Independence as a Bound [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Paul_presentation_WoNeCa_2020.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">16:35-16:45</td>
-	      <td style="width: 739.9375px;">Coffee Break</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">16:45-18:25</td>
-	      <td style="width: 739.9375px;">Session 6: SNC &amp; Wireless</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Jaya Prakash Varma Champati (KTH): Statistical Guarantee Optimization for AoI in Single-Hop and Two-Hop Systems with Periodic Arrivals&nbsp;[<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/Jaya_Champati_WoNeCa2020.pdf" target="_blank" rel="noopener noreferrer">slides</a>]&nbsp;[<a href="https://drive.google.com/file/d/1sMHNiWsAcPCpJUcVUMQlxFtroWWpXH8n/view" target="_blank" rel="noopener noreferrer">video</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Sami Akin (U Hannover):&nbsp;On the energy and data storage management in energy harvesting wireless communications</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Orangel Azuaje Contreras (U Porto): Delay Guarantees of a Realistic WiFi-based First Responder Ad-Hoc Network</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">&nbsp;</td>
-	      <td style="width: 739.9375px;">Florin Ciucu (U Warwick): Two Extensions of Kingman's GI/G/1 Bound [<a href="https://disco.cs.uni-kl.de/discofiles/downloads/WoNeCa2020/ciucu_woneca20.pdf" target="_blank" rel="noopener noreferrer">slides</a>]</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 74.0625px;">18:25-18:35</td>
-	      <td style="width: 739.9375px;">Closing &amp; Best presentation Award</td>
-	    </tr>
-	  </tbody>
-	</table>
-
-	-->
-
-	<!-- Virtual event
-	<h3>Virtual Event Instructions</h3>
-	<p><strong>We will conduct the virtual event via Zoom.&nbsp;The meeting invitation been sent on&nbsp;October 07. If you have not received the link, please contact Amr (<span id="cloak566174287338f2f80e6dbb37e878df21"><a href="mailto:amr.rizk@uni-ulm.de">amr.rizk@uni-ulm.de</a></span><script type="text/javascript">
-	      document.getElementById('cloak566174287338f2f80e6dbb37e878df21').innerHTML = '';
-	      var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
-	      var path = 'hr' + 'ef' + '=';
-	      var addy566174287338f2f80e6dbb37e878df21 = '&#97;mr.r&#105;zk' + '&#64;';
-	      addy566174287338f2f80e6dbb37e878df21 = addy566174287338f2f80e6dbb37e878df21 + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';
-	      var addy_text566174287338f2f80e6dbb37e878df21 = '&#97;mr.r&#105;zk' + '&#64;' + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';document.getElementById('cloak566174287338f2f80e6dbb37e878df21').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy566174287338f2f80e6dbb37e878df21 + '\'>'+addy_text566174287338f2f80e6dbb37e878df21+'<\/a>';
-	    </script>).</strong></p>
-	<p>While we plan to&nbsp;have live presentations using&nbsp;Zoom's screen sharing feature, we also ask presenters to provide&nbsp;a recording&nbsp;to be played in case of technical problems. All presenters should have received an email by Amr with instructions and&nbsp;the upload link. If you have not received an email, please contact Amr (<span id="cloak98257688bbce4839d8d216a290ad33db"><a href="mailto:amr.rizk@uni-ulm.de">amr.rizk@uni-ulm.de</a></span><script type="text/javascript">
-	    document.getElementById('cloak98257688bbce4839d8d216a290ad33db').innerHTML = '';
-	    var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
-	    var path = 'hr' + 'ef' + '=';
-	    var addy98257688bbce4839d8d216a290ad33db = '&#97;mr.r&#105;zk' + '&#64;';
-	    addy98257688bbce4839d8d216a290ad33db = addy98257688bbce4839d8d216a290ad33db + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';
-	    var addy_text98257688bbce4839d8d216a290ad33db = '&#97;mr.r&#105;zk' + '&#64;' + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';document.getElementById('cloak98257688bbce4839d8d216a290ad33db').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy98257688bbce4839d8d216a290ad33db + '\'>'+addy_text98257688bbce4839d8d216a290ad33db+'<\/a>';
-	  </script>).</p>
-	-->
-
-	<p>Slot for every talk is 25 min = 20min talk + 5min Q&amp;A</p>
-	<p>The best presentation will be awarded with a price! Voting will be anonymous and will take place during the closing session.</p>
-
-	<h3 id="WorkshopOrganizers">Workshop Organizers</h3>
-	<p>Jean-Yves Le Boudec, EPFL, SWI</p>
-	<p>Steffen Bondorf, Ruhr University Bochum, GER</p>
-	<p>Amr Rizk, Ulm University, GER</p>
-	<p>Markus Fidler, Leibniz University Hannover, GER</p>
-	<p>Jens Schmitt, TU&nbsp;Kaiserslautern, GER</p>
-
-	<h3 id="EventOrganization">Event Organizations</h3>
-	<p> TBD </p>
-
-	<h3 id="EventInstructions">Event Instructions</h3>
-	<p> TBD </p>
-
-	
-	<h3 id="CallForPresentations"><span>Call for Presentations</span></h3>
-	<p><span style="line-height:
-			normal; text-align:
-			-webkit-auto;"> The idea is to
-	    have an informal meeting with
-	    presentations of recent work
-	    in the context of network
-	    calculus (theory,applications,
-	    tool support) and gather as
-	    many network calculus experts
-	    as possible to discuss about
-	    the future development of the
-	    theory and its application
-	    opportunities. Hence, there
-	    are no written papers and
-	    everyone can present his/her
-	    "hottest" recent research on
-	    network calculus.</span></p>
-	<p>If you like to present then
-	  please send:
-	  <ol>
-	    <li>The title of your presentation</li>
-	    <li> <strong>
-		And </strong> the name of the
-	      presenter in an email
-	      to 
-	    </li>
-	  </ol>
-	  <!-- and <br>the name
-	  of the presenter in an email
-	  to</p> -->
-	<p><span id="cloak3904acb452e953966379c250ccd7bd0a"><a href="mailto:amr.rizk@uni-ulm.de">amr.rizk@uni-ulm.de</a></span><script type="text/javascript">
-	    document.getElementById('cloak3904acb452e953966379c250ccd7bd0a').innerHTML = '';
-	    var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
-	    var path = 'hr' + 'ef' + '=';
-	    var addy3904acb452e953966379c250ccd7bd0a = '&#97;mr.r&#105;zk' + '&#64;';
-	    addy3904acb452e953966379c250ccd7bd0a = addy3904acb452e953966379c250ccd7bd0a + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';
-	    var addy_text3904acb452e953966379c250ccd7bd0a = '&#97;mr.r&#105;zk' + '&#64;' + '&#117;n&#105;-&#117;lm' + '&#46;' + 'd&#101;';document.getElementById('cloak3904acb452e953966379c250ccd7bd0a').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy3904acb452e953966379c250ccd7bd0a + '\'>'+addy_text3904acb452e953966379c250ccd7bd0a+'<\/a>';													    </script> AND<br> <span id="cloak538020b5cf1010a4a54bd157665b4ff6"><a href="mailto:steffen.bondorf@ruhr-uni-bochum.de">steffen.bondorf@ruhr-uni-bochum.de</a></span><script type="text/javascript">
-	    document.getElementById('cloak538020b5cf1010a4a54bd157665b4ff6').innerHTML = '';
-	    var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
-	    var path = 'hr' + 'ef' + '=';
-	    var addy538020b5cf1010a4a54bd157665b4ff6 = 'st&#101;ff&#101;n.b&#111;nd&#111;rf' + '&#64;';
-	    addy538020b5cf1010a4a54bd157665b4ff6 = addy538020b5cf1010a4a54bd157665b4ff6 + 'r&#117;hr-&#117;n&#105;-b&#111;ch&#117;m' + '&#46;' + 'd&#101;';
-	    var addy_text538020b5cf1010a4a54bd157665b4ff6 = 'st&#101;ff&#101;n.b&#111;nd&#111;rf' + '&#64;' + 'r&#117;hr-&#117;n&#105;-b&#111;ch&#117;m' + '&#46;' + 'd&#101;';document.getElementById('cloak538020b5cf1010a4a54bd157665b4ff6').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy538020b5cf1010a4a54bd157665b4ff6 + '\'>'+addy_text538020b5cf1010a4a54bd157665b4ff6+'<\/a>';</script></p>
-	<p>In case of contention, presentations will be selected based on topical coherence.</p>
+	<a id="jsn-gotoplink" href="https://disco.cs.uni-kl.de/woneca-2020#top" style="display: none;">
+	  <span>Go to top</span>
+	</a>
 
 
-	<h3 id="ImportantDates">Important Dates</h3>
-	<p style="font-size: 13px;
-		  color: #000000; font-family:
-		  Helvetica; line-height:
-		  normal;"><span style="font-family:
-					tahoma, arial, helvetica,
-					sans-serif; font-size: 9pt;
-					color: #333333;">Submission of
-	    presentation title and
-	    abstract: <span>
-	      <!--style="text-decoration:
-	      line-through;"--> <strong style="color:red;">
-		June 10th, 2022 </strong> </span><!--&nbsp;<span style="text-decoration: line-through;">January 14, 2020</span> (extended, passed)</span>--></p>
-	<p style="font-size: 13px; color: #000000; font-family: Helvetica; line-height: normal;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 9pt; color: #333333;">Notification of invitation for presentation: <span> <!--style="text-decoration: line-through;"-->July 1st, 2022</span><!--&nbsp;<span style="text-decoration: line-through;">January 19, 2020</span> (extended, passed)</span>--></p>
-	<p style="font-size: 13px; color: #000000; font-family: Helvetica; line-height: normal;"><span style="font-size: 9pt; color: #333333;"><span style="font-family: tahoma, arial, helvetica, sans-serif;">Workshop date: <!--<span style="text-decoration: line-through;">&nbsp;18, 2020</span>&nbsp;--><span> <!--style="text-decoration: line-through;"-->September&nbsp;8th and 9th, 2022<!--</span> (extended)</span>--></span></p>
-
-
-	<!-- <h3>&nbsp;</h3> -->
-
-
-	<!--
-	<p>&nbsp;</p>
-	<h1><span style="font-size: 14pt;">[WoNeCa-5]&nbsp;Cancelled physical event in Saarbrücken (collocated with MMB 2020)</span></h1>
-	<p>Dear network calculus community,<br><br>In face of the outbreak of the coronavirus in Europe, we will have to&nbsp;cancel the current WoNeCa workshop dates. Safety and health of our&nbsp;participants is our highest concern. We plan to postpone WoNeCa-5 to&nbsp;safer times, potentially later this year. We are very sorry that we&nbsp;cannot meet as soon as planned and we will keep you up to date.<br><br>Please also note announcements&nbsp;of the MMB 2020 conference that intended to host our workshop: <a href="http://www.mmb2020.de/" target="_blank" rel="alternate noopener noreferrer">MMB 2020</a>.<br><br>Best regards,<br>Amr, Steffen, Markus and Jens</p>
-	-->	
-
-
-	<h3 id="Registration">Registration</h3>
-	<p>TBD</p>
-	<p>The workshop will integrated into the&nbsp;<a href="http://www.mmb2020.de/" target="_blank" rel="alternate noopener noreferrer">MMB 2020</a>&nbsp;conference.&nbsp;Registration details are available&nbsp;<a href="https://www.mmb2020.de/registration/">here</a>.<br>Note the early registration deadline: March 01.</p>
-
-
-	<h3 id="Program">Program</h3>
-	<p>TBD</p>
-	<!-- Program 
-	<p><b>Wednesday, March 18</b></p>
-	<table class="cool" style="width: 830px;">
-	  <tbody>
-	    <tr>
-	      <td style="width: 83.34375px;">08:30-09:00</td>
-	      <td style="width: 731.65625px;">Workshop Registration</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">09:00-10:00</td>
-	      <td style="width: 731.65625px;">
-		<p>WoNeCa Keynote by&nbsp;François Baccelli&nbsp;on Interference Networks [<a href="https://disco.cs.uni-kl.de/woneca-2020#Keynote">Abstract</a>] (Keynote is held together with MMB)</p>
-	      </td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">10:00-10:30</td>
-	      <td style="width: 731.65625px;">Coffee Break</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">10:30-12:35</td>
-	      <td style="width: 731.65625px;">Session 1: Bounds and Networks</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Anne Bouillard: Stability and performance bounds in cyclic networks</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Isaac Howenstine: Converting Non-feedforward Networks to Feedforward for Network Calculus</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Ehsan Mohammadpour: Improved Delay Bound for a Service Curve Element with Known Transmission Rate</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Raffaele Zippo: Algebraic transformations for network paths with hop-by-hop flow control</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Jiayi Zhang: Using Network Calculus in High Quality IP Network</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">12:35-14:00</td>
-	      <td style="width: 731.65625px;">Lunch</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">14:00-15:45</td>
-	      <td style="width: 731.65625px;">Session 2: TSN</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Luxi Zhao: Using Network Calculus to Improve End-to-End Latency Upper Bound of Multiple Classes of AVB Traffic in TSN Networks</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Lisa Maile: Shaper and Maximum Service Curves for TSN</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Ludovic Thomas: On Cyclic Dependencies and Regulators in Time-Sensitive Networks</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Jonathan Falk: Network Calculus for systems with time-triggered service intermittence</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">15:45-16:15</td>
-	      <td style="width: 731.65625px;">Coffee Break</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">16:15-17:35</td>
-	      <td style="width: 731.65625px;">Session 3: Stochastic Modeling and Analysis</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Florin Ciucu: Two Extensions of Kingman's GI/G/1 Bound&nbsp;<em>(updated)</em></td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Jaya Prakash Varma Champati: Statistical Guarantee Optimization for AoI in Single-Hop and Two-Hop Systems with Periodic Arrivals</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">&nbsp;</td>
-	      <td style="width: 731.65625px;">Paul Kühn: Performance Modeling of Generalized Fork-Join Problems by Task Graph Reductions</td>
-	    </tr>
-	    <tr>
-	      <td style="width: 83.34375px;">19:00 -<br> open end</td>
-	      <td style="width: 731.65625px;">WoNeCa Social Event at&nbsp;manin restaurant [<a href="https://www.manin.de/saarbruecken/" target="_blank" rel="noopener noreferrer">www</a>] [<a href="https://www.google.com/maps/place/manin+Saarbr%C3%BCcken/@49.2383393,6.9894008,15z/data=!4m5!3m4!1s0x0:0x6cd70e526df79bc!8m2!3d49.2383393!4d6.9894008" target="_blank" rel="noopener noreferrer">map</a>]</td>
-	    </tr>
-	  </tbody>
-	</table>
-	<p><strong>Thursday, March 19</strong></p>
-	<table class="cool">
-	  <tbody>
-	    <tr>
-	      <td>09:00-10:45</td>
-	      <td>Session 6: Schedulers &amp; SNC</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Jörg Liebeherr: Hierarchical Fair Scheduling: A Reality Check</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Seyed Mohammadhossein Tabatabaee: Interleaved Weighted Round Robin: a tight, strict residual service curve</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Paul Nikolaus: Dealing with Dependence in Stochastic Network Calculus - Using Independence as a Bound</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Hao Wang: Data Center Network Calculus</td>
-	    </tr>
-	    <tr>
-	      <td>10:45-11:15&nbsp;</td>
-	      <td>Coffee Break</td>
-	    </tr>
-	    <tr>
-	      <td>11:15-12:05</td>
-	      <td>Deterministic Modeling and Analysis</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Georg Carle: Measurement-based Network Calculus Modelling of Programmable Network Components implemented in P4</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Marc Boyer: Formalization of relations between cumulative curves and event streams: from network calculus to CPA, and back</td>
-	    </tr>
-	    <tr>
-	      <td>12:05-13:30</td>
-	      <td>Lunch</td>
-	    </tr>
-	    <tr>
-	      <td>13:30-14:45</td>
-	      <td>Session 5: Wireless</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Sami Akin: On the energy and data storage management in energy harvesting wireless communications</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Orangel Azuaje Contreras: Delay Guarantees of a Realistic WiFi-based First Responder Ad-Hoc Network</td>
-	    </tr>
-	    <tr>
-	      <td>&nbsp;</td>
-	      <td>Qiao Li: Network Calculus based Analysis on Traffic Scheduling at a WAIC Gateway Accessing through Fading Channels</td>
-	    </tr>
-	    <tr>
-	      <td>14:45-15:00</td>
-	      <td>Closing Session &amp; Best presentation award</td>
-	    </tr>
-	  </tbody>
-	</table>
-	-->
-	
-	<h3 id="Keynote">Keynote Abstract</h3>
-	<p> Do we do a keynote or not ? </p>
-	<!--
-	<p><strong>François Baccelli - Interference Networks</strong></p>
-	<p>This talk features networks of coupled processor sharing queues in the Euclidean space,<br>where customers arrive according to independent Poisson point processes at every queue,<br>are served, and then leave the network. The coupling is through service rates.<br>In any given queue, this rate is inversely proportional the interference seen by this queue,<br>which is determined by the load in neighboring queues, attenuated by some distance-based path-loss function.</p>
-	<p>The model is a discrete version of a spatial birth and death process where customers<br>arrive to the Euclidean space according to Poisson rain and leave it when they<br>have transferred an exponential file, assuming that the instantaneous rate of each transfer is<br>determined through information theory by the signal to interference and noise ratio experienced by the user.</p>
-	<p>The discrete and the continuous models will be discussed, both in finite and infinite domains.<br>The stability condition is identified. The minimal stationary regime is built<br>using coupling from the past techniques.</p>
-	<p>The mean queue size of this minimal stationary regime is determined in closed form using <br>the rate conservation principle of Palm calculus. Some bounds on the tail of latency <br>will be discussed.</p>
-	<p>In infinite domains, when the stability condition holds, for all bounded initial conditions,<br>there is weak convergence to this minimal stationary regime; however, there exist<br>initial conditions for which all queue sizes converge to infinity.</p>
-	<p>Joint work with S. Foss and
-	  A. Sankararaman</p> 	
-	-->
-
-    	<h3 id="TopicOfInterest"> <!-- <span style="line-height: normal; text-align: -webkit-auto; font-size: 10pt;"><span style="line-height: 1.5; text-align: -webkit-auto;">-->Topics of Interest<!--</span></span>--></h3>
-	<p>The topics of this workshop are related to fundamental aspects as well as applications of network calculus. The following list of topics is non-exclusive:</p>
-	<table style="width: 739px;" cellpadding="10">
-	  <tbody>
-	    <tr>
-	      <td style="width: 493px;">
-		<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Deterministic and stochastic network calculus, e.g.</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>traffic and service models</li>
-		  <li>general topologies</li>
-		  <li>numerical tightness</li>
-		</ul>
-	      </td>
-	      <td style="width: 593px;" colspan="2">
-		<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Relation to other theories, e.g.,</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>queueing theory</li>
-		  <li>discrete event dynamic systems</li>
-		  <li>optimization</li>
-		</ul>
-	      </td>
-	    </tr>
-	    <tr>
-	      <td style="width: 493px;">
-		<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Feedback systems, e.g.,</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>TCP network calculus</li>
-		  <li>window flow control</li>
-		  <li>retransmission-based systems</li>
-		</ul>
-	      </td>
-	      <td style="width: 593px;" colspan="2">
-		<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Loss systems, e.g.,</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>bounded queues</li>
-		  <li>wireless links</li>
-		</ul>
-	      </td>
-	    </tr>
-	    <tr>
-	      <td style="width: 493px;">
-		<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Aggregate multiplexing, e.g.,</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>optimization-based approaches</li>
-		  <li>efficient algorithms</li>
-		  <li>stochastic case</li>
-		</ul>
-	      </td>
-	      <td style="width: 593px;" colspan="2">
-		<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Tool support, e.g.,</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>numerical problems</li>
-		  <li>numerical approximations</li>
-		  <li>implementation experience</li>
-		</ul>
-	      </td>
-	    </tr>
-	    <tr>
-	      <td style="width: 493px;">
-		<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">Data transformation, e.g.,</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>end-to-end analysis</li>
-		  <li>in-network processing</li>
-		  <li>network coding</li>
-		</ul>
-		<p>&nbsp;</p>
-	      </td>
-	      <td style="width: 245.453125px;">
-		<p style="font-family: Helvetica; font-size: 13px; line-height: normal;">New applications, e.g.,</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>TSN, DetNet and 5G</li>
-		  <li>energy storage</li>
-		  <li>tactile internet</li>
-		  <li>cache networks</li>
-		  <li>real-time calculus</li>
-		</ul>
-	      </td>
-	      <td style="width: 347.546875px;">
-		<p>&nbsp;</p>
-		<ul style="font-family: Helvetica; font-size: 13px; line-height: normal;">
-		  <li>avionic networks</li>
-		  <li>mission-critical networks</li>
-		  <li>the power grid</li>
-		  <li>wireless sensor networks</li>
-		  <li>cyber-physical systems</li>
-		</ul>
-	      </td>
-	    </tr>
-	  </tbody>
-	</table>
-	<h3 id="Access"> Access </h3>
-    <p>TBD advise hotel, adresse ?</p>
-    <p> Écublens (near Lausanne), Canton of Vaud, Switzerland,
-      46°31′13″N 6°33′56″E </p>
-    <br>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<!--  2222   -->
-<!-- In left side tabular -->			    
-<div id="jsn-leftsidecontent" class="span3 order1 offset-12">
-  <div id="jsn-leftsidecontent_inner">
-    <div id="jsn-pos-left">
-      <div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><div><div><h3 class="jsn-moduletitle"><span class="jsn-moduleicon"> 6th Workshop on Network Calculus
-		  (WoNeCa-6) <!-- In conjunction with MMB 2020--> </span></h3><div class="jsn-modulecontent">
-		<div>
-		  <!-- <p><strong> 6th Workshop on Network Calculus
-		  (WoNeCa-6) </strong> </p> <!-- 20th International
-		  GI/ITG Conference on “Measurement, Modelling and
-		  Evaluation of Computing Systems”.</p>-->
-
-<!--<p><span> Important dates:
-<p><span> <strong>September&nbsp;8-9, 2022</strong></span></p>
--->
-	<h3>Important Dates</h3>
-	<p style="font-size: 13px; color: #000000;
-	    font-family:Helvetica; line-height:
-	    normal;"><span style="font-family:tahoma, arial,
-	    helvetica,sans-serif; font-size: 9pt; color:
-	    #333333;">Submission of presentation title and
-	    abstract: </span>
-	    <span>June 10th, 2022</span></p>
-	<p style="font-size: 13px; color: #000000; font-family:
-	Helvetica; line-height: normal;"><span style="font-family:
-	tahoma, arial, helvetica, sans-serif; font-size: 9pt; color:
-	#333333;">Notification of invitation for presentation:</span><br>
-	    <span> July 1st, 2022</span></p>
-	<p style="font-size: 13px; color: #000000; font-family:
-	Helvetica; line-height: normal;"><span style="font-size: 9pt;
-	color: #333333; font-family: tahoma, arial,
-				      helvetica, sans-serif;">Workshop date: </span><br>
-	    <span style="color:red;"> <strong> September&nbsp;9th and
-	    9th, 2022 </strong> </span></p>
-
-
-    <p><span> <!-- style="text-decoration:
-		  line-through;"--> <span style="color: #008000; font-size: large; <!-- text-decoration: line-through;-->"><strong>Lausanne</strong></span>&nbsp;(Switzerland)</span></p>
-		  <!-- <p>Please note updates regarding the <br>outbreak of Coronavirus&nbsp;in Europe on</p>
-		  <p><a href="http://www.mmb2020.de/" target="_blank"
-		  rel="alternate noopener
-		       noreferrer">http://www.mmb2020.de/</a></p>-->
-</div>
-
-<div class="clearbreak"> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!--  -->
-
-<!--  2222   -->
-<!-- At the bottom of the page -->
-<div id="jsn-footer">
-  <div id="jsn-footer_inner">
-    <div id="jsn-footermodules" class="jsn-modulescontainer jsn-modulescontainer1 row-fluid">
-      <div id="jsn-pos-footer">
-        <div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><div class="jsn-modulecontent"><span class="jsn-menu-toggle">Menu</span>
-	      <div>
-		<p>Computer Communications and Applications Laboratory
-		2 -  <strong> LCA2 </strong> <br>
-		<p> Ecole Polytechnique federal de Lausanne -  <strong> EPFL </strong> </p>
-		<p> EPFL IC IINFCOM LCA2, BC 205 (Bâtiment BC), Station 14, CH-1015 Lausanne</p></br></div><div class="clearbreak"></div></div></div></div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- -->
-
-<a id="jsn-gotoplink" href="https://disco.cs.uni-kl.de/woneca-2020#top" style="display: none;">
-  <span>Go to top</span>
-</a>
-
-
-<div id="sbox-overlay" aria-hidden="true" tabindex="-1" style="z-index: 65555; opacity: 0;"></div><div id="sbox-window" role="dialog" aria-hidden="true" class="shadow" style="z-index: 65557;"><div id="sbox-content" style="opacity: 0;"></div><a id="sbox-btn-close" href="https://disco.cs.uni-kl.de/woneca-2020#" role="button" aria-controls="sbox-window"></a></div></body></html>
+	<div id="sbox-overlay" aria-hidden="true" tabindex="-1" style="z-index: 65555; opacity: 0;"></div><div id="sbox-window" role="dialog" aria-hidden="true" class="shadow" style="z-index: 65557;"><div id="sbox-content" style="opacity: 0;"></div><a id="sbox-btn-close" href="https://disco.cs.uni-kl.de/woneca-2020#" role="button" aria-controls="sbox-window"></a></div></body></html>

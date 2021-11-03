@@ -1,0 +1,1569 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+/* ============================== DEFAULT HTML ============================== */
+/* =============== DEFAULT HTML - HEADING STYLES =============== */
+/* ============================== LAYOUT ============================== */
+/* =============== LAYOUT - GENERAL LAYOUT =============== */
+#jsn-page {
+	transition: width 0.3s ease-in-out;
+	-moz-transition: width 0.3s ease-in-out;
+	-webkit-transition: width 0.3s ease-in-out;
+}
+div#jsn-pos-breadcrumbs.display-mobile,
+div.jsn-modulecontainer.display-mobile,
+div#jsn-pos-breadcrumbs.display-tablet,
+div.jsn-modulecontainer.display-tablet,
+div#jsn-pos-breadcrumbs.display-smartphone,
+div.jsn-modulecontainer.display-smartphone {
+	display: none;
+}
+div#jsn-pos-breadcrumbs.display-desktop,
+div.jsn-modulecontainer.display-desktop {
+	display: block;
+}
+/* =============== LAYOUT - MENU AREA =============== */
+/* =============== MENU SUFFIX =============== */
+#jsn-menu div.display-inline.jsn-modulecontainer {
+	margin: 5px 10px 0;
+}
+#jsn-pos-top div.display-dropdown.jsn-modulecontainer .jsn-modulecontent,
+#jsn-menu div.display-dropdown.jsn-modulecontainer .jsn-modulecontent {
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+	z-index: 200;
+	background: #fff;
+	padding: 10px;
+	min-width: 220px;
+	color: #666;
+}
+#jsn-menu div.display-dropdown.jsn-modulecontainer .jsn-modulecontent {
+	margin: 10px 0 0 0;
+	margin: 0\9;
+}
+#jsn-menu div.display-dropdown.jsn-modulecontainer a,
+#jsn-menu div.display-inline.jsn-modulecontainer a {
+	color: #666;
+	text-decoration:none;
+}
+#jsn-menu div.display-dropdown.jsn-modulecontainer a:hover,
+#jsn-menu div.display-inline.jsn-modulecontainer a:hover {
+	color: #333;
+}
+#jsn-pos-top div.display-dropdown.jsn-modulecontainer .jsn-modulecontainer_inner,
+#jsn-menu .jsn-modulecontainer.display-dropdown .jsn-modulecontainer_inner {
+	position: relative;
+}
+#jsn-menu .jsn-modulecontainer[class*="display-"] .jsn-modulecontainer_inner h3.jsn-moduletitle {
+	text-shadow: none;
+	padding: 0;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+#jsn-menu .jsn-modulecontainer[class*="display-"] .jsn-modulecontainer_inner h3.jsn-moduletitle span {
+	line-height: 1.5;
+}
+#jsn-menu div.display-dropdown.jsn-modulecontainer .jsn-modulecontainer_inner h3.jsn-moduletitle > span {
+	padding: 4px 15px;
+}
+#jsn-pos-top div.display-dropdown.jsn-modulecontainer .jsn-modulecontainer_inner:hover .jsn-modulecontent,
+#jsn-menu .jsn-modulecontainer.display-dropdown .jsn-modulecontainer_inner:hover .jsn-modulecontent {
+	visibility: visible;
+}
+#jsn-menu div.display-dropdown.menu-richmenu.jsn-modulecontainer .jsn-modulecontent {
+	top: 58px;
+}
+#jsn-menu div.display-dropdown.menu-richmenu.jsn-modulecontainer .jsn-modulecontainer_inner h3.jsn-moduletitle > span {
+	padding: 11px 11px 31px;
+}
+/* =============== MENU - TOOLBAR POSITION =============== */
+#jsn-pos-toolbar div.jsn-modulecontainer ul.menu-mainmenu ul {
+	right: 0;
+}
+#jsn-pos-toolbar div.jsn-modulecontainer ul.menu-mainmenu ul li.parent > a {
+    background-image: url("../images/icons/icon-arrow-white-rtl.png");
+    background-position: 2% center;
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    padding-right: 12px;
+}
+#jsn-pos-toolbar div.jsn-modulecontainer ul.menu-mainmenu ul li a {
+    border-right: 1px solid #162C40;
+    text-align: right;
+}
+/* =============== LAYOUT - CONTENT AREA =============== */
+#jsn-gotoplink {
+	color: #999;
+	z-index: 999999;
+	padding: 8px 12px;
+	display: block;
+	background-color: #000;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	margin:0 !important;
+}
+#jsn-gotoplink:hover {
+	color: #e5e5e5;
+	text-decoration: none;
+	background-color: #333333;
+}
+#jsn-pos-user-top .jsn-modulecontainer .jsn-modulecontainer_inner{
+	margin: 0 0 10px 10px;
+}
+#jsn-pos-user-bottom .jsn-modulecontainer .jsn-modulecontainer_inner{
+	margin: 10px 0 0 10px;
+}
+#jsn-pos-user-top .jsn-modulecontainer:nth-child(1) .jsn-modulecontainer_inner,
+#jsn-pos-user-bottom .jsn-modulecontainer:nth-child(1) .jsn-modulecontainer_inner  {
+	margin-left: 0;
+}
+/* =============== BACKGROUND POSITION =============== */
+#jsn-pos-background {
+    margin: 0 auto;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+	text-align: center;
+    width: 100%;
+    z-index: -100;
+}
+#jsn-pos-background p {
+	margin: 0;
+}
+#jsn-pos-background img {
+	width: 100%;
+}
+/* ============================== TYPOGRAPHY ============================== */
+/* =============== TYPOGRAPHY - TEXT STYLES =============== */
+.text-alert {
+	border: 1px solid #FEABAB;
+	background: #FFDFDF url(../images/icons/icon-text-alert.png) no-repeat;
+}
+.text-info {
+	border: 1px solid #B7D2F2;
+	background: #DBE7F8 url(../images/icons/icon-text-info.png) no-repeat;
+}
+.text-download {
+	border: 1px solid #DDEDBC;
+	background: #F2F9E5 url(../images/icons/icon-text-download.png) no-repeat;
+}
+.text-comment {
+	border: 1px solid #FEEBAB;
+	background: #FEF8E1 url(../images/icons/icon-text-comment.png) no-repeat;
+}
+.text-tip {
+	border: 1px solid #FEEBAB;
+	background: #FFFFD5 url(../images/icons/icon-text-tip.png) no-repeat;
+}
+.text-attachment {
+	border: 1px solid #e5e5e5;
+	background: #f2f2f2 url(../images/icons/icon-text-attachment.png) no-repeat;
+}
+.text-video {
+	border: 1px solid #e5e5e5;
+	background: #f2f2f2 url(../images/icons/icon-text-video.png) no-repeat;
+}
+.text-audio {
+	border: 1px solid #e5e5e5;
+	background: #f2f2f2 url(../images/icons/icon-text-audio.png) no-repeat;
+}
+.text-tip,
+.text-info,
+.text-alert,
+.text-audio,
+.text-video,
+.text-comment,
+.text-download,
+.text-attachment {
+	background-position: 20px center;
+	padding: 0.8em 0.8em 0.8em 6em;
+	min-height: 20px;
+}
+/* =============== TYPOGRAPHY - LINK STYLES =============== */
+/* ----- BUTTON LINK ----- */
+.link-button {
+	cursor: pointer;
+	font-size: 1.1em;
+	padding: 5px 12px;
+	display: inline-block;
+	text-decoration: none;
+}
+.link-button:hover {
+	border-color: #000;
+}
+a.link-button:hover,
+.link-button a:hover {
+	text-decoration: none;
+}
+a.link-button,
+.link-button a {
+	font-weight: bold;
+	color: #fff !important;
+}
+.link-button.button-light,
+.link-button.button-light a {
+	color: #333 !important;
+}
+.link-button .link-icon {
+	margin: 3px 0;
+	line-height: 22px;
+}
+/* ----- ICON LINK ----- */
+.link-icon {
+	display: inline-block;
+}
+.link-icon[class*="jsn-icon-"] {
+	padding-left: 24px;
+}
+/* ----- EXTENDED LINK ----- */
+.link-icon-ext {
+	display: inline-block;
+	padding-right: 22px;
+	background: url(../images/icons/icons-ext.png) no-repeat right 0;
+}
+.link-icon-ext.jsn-icon-ext-aim {
+	background-position: right 0;
+}
+.link-icon-ext.jsn-icon-ext-archive {
+	background-position: right -86px;
+}
+.link-icon-ext.jsn-icon-ext-mobile {
+	background-position: right -172px;
+}
+.link-icon-ext.jsn-icon-ext-css {
+	background-position: right -258px;
+}
+.link-icon-ext.jsn-icon-ext-application {
+	background-position: right -344px;
+}
+.link-icon-ext.jsn-icon-ext-doc {
+	background-position: right -430px;
+}
+.link-icon-ext.jsn-icon-ext-feed {
+	background-position: right -516px;
+}
+.link-icon-ext.jsn-icon-ext-movie {
+	background-position: right -602px;
+}
+.link-icon-ext.jsn-icon-ext-flash {
+	background-position: right -688px;
+}
+.link-icon-ext.jsn-icon-ext-calendar {
+	background-position: right -774px;
+}
+.link-icon-ext.jsn-icon-ext-mail {
+	background-position: right -860px;
+}
+.link-icon-ext.jsn-icon-ext-quicktime {
+	background-position: right -946px;
+}
+.link-icon-ext.jsn-icon-ext-msn {
+	background-position: right -1032px;
+}
+.link-icon-ext.jsn-icon-ext-music {
+	background-position: right -1118px;
+}
+.link-icon-ext.jsn-icon-ext-pdf {
+	background-position: right -1204px;
+}
+.link-icon-ext.jsn-icon-ext-powerpoint {
+	background-position: right -1290px;
+}
+.link-icon-ext.jsn-icon-ext-skype {
+	background-position: right -1376px;
+}
+.link-icon-ext.jsn-icon-ext-torrent {
+	background-position: right -1462px;
+}
+.link-icon-ext.jsn-icon-ext-font {
+	background-position: right -1548px;
+}
+.link-icon-ext.jsn-icon-ext-text {
+	background-position: right -1634px;
+}
+.link-icon-ext.jsn-icon-ext-vcard {
+	background-position: right -1720px;
+}
+.link-icon-ext.jsn-icon-ext-windowsmedia {
+	background-position: right -1806px;
+}
+.link-icon-ext.jsn-icon-ext-xls {
+	background-position: right -1892px;
+}
+.link-icon-ext.jsn-icon-ext-yahoo {
+	background-position: right -1978px;
+}
+/* =============== TYPOGRAPHY - TABLE STYLES =============== */
+table.table-style {
+	background: #ffffff;
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #404040;
+}
+table.table-style caption {
+	padding: 6px 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+table.table-style td,
+table.table-style th {
+	padding: 10px;
+	border-bottom: 1px solid #fff;
+}
+table.table-style th {
+	text-align: left;
+}
+table.table-style .highlight {
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+table.table-style thead th {
+	font-size: 1.1em;
+	border-top: 6px solid #fff;
+	color: #ffffff;
+}
+table.table-style thead th.highlight {
+	border-top: none;
+}
+table.table-style tbody th,
+table.table-style tbody td {
+	vertical-align: top;
+	text-align: left;
+	border-left: 1px solid #fff;
+}
+table.table-style tbody .highlight {
+	background-color: #999;
+}
+table.table-style tbody tr.odd {
+	background: #f2f2f2;
+}
+table.table-style tbody tr.odd .highlight {
+	background-color: #7E7E7E;
+}
+table.table-style tbody tr:hover th,
+table.table-style tbody tr:hover td {
+	background: #E4E4E4;
+}
+table.table-style tbody tr:hover .highlight {
+	background: #737373;
+}
+table.table-style tfoot th,
+table.table-style tfoot td {
+	border: none;
+	padding: 4px 10px;
+	background-color: #d9d9d9;
+}
+table.table-style tfoot td {
+	text-align: right;
+}
+/* ----- COLOR HEADER TABLE ----- */
+table.style-colorheader thead th.highlight {
+	background-color: #484848;
+}
+/* ----- COLOR STRIPES TABLE ----- */
+table.style-colorstripes {
+	color: #fff;
+}
+table.style-colorstripes thead,
+table.style-colorstripes tfoot {
+	border: none;
+}
+table.style-colorstripes tbody .highlight {
+	color: #333;
+	border-bottom: 1px solid #fff;;
+	border-top: none;
+}
+table.style-colorstripes tfoot {
+	border-right:1px solid #fff;
+}
+/* ----- GREY STRIPES TABLE ----- */
+table.style-greystripes thead th {
+	background: #404040;
+	border-right: 1px groove #666;
+}
+/* =============== TYPOGRAPHY - LIST STYLES =============== */
+/* ----- ICON LIST ----- */
+ul.list-icon {
+	list-style-type: none;
+}
+ul.list-icon li {
+	margin: 5px 0;
+	position: relative;
+	padding-left: 20px;
+}
+ul.list-icon li .jsn-listbullet {
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+}
+/* ----- BULLET NUMBER LIST ----- */
+ul.list-number-bullet {
+	list-style: none;
+}
+ul.list-number-bullet li {
+	margin-left: 0;
+	position: relative;
+	padding: 6px 0 6px 36px;
+}
+ul.list-number-bullet li .jsn-listbullet {
+	color: #fff;
+	height: 24px;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	margin: 4px;
+	left: 0;
+	top: -2px;
+	width: 24px;
+	display: block;
+	font-weight: bold;
+	position: absolute;
+}
+/* ----- DIGIT NUMBER LIST ----- */
+ul.list-number-digit {
+	list-style: none;
+}
+ul.list-number-digit li {
+	margin-left: 0;
+	position: relative;
+	padding: 8px 0 8px 42px;
+}
+ul.list-number-digit li .jsn-listbullet {
+	top: 0;
+	left: 0;
+	width: 32px;
+	display: block;
+	font-size: 32px;
+	line-height: 100%;
+	text-align: right;
+	font-weight: bold;
+	position: absolute;
+}
+ul.list-number-digit.digit-blue li .jsn-listbullet {
+	color: #02a4e4;
+}
+ul.list-number-digit.digit-green li .jsn-listbullet {
+	color: #7fc348;
+}
+ul.list-number-digit.digit-grey li .jsn-listbullet {
+	color: #6a6a6a;
+}
+ul.list-number-digit.digit-orange li .jsn-listbullet {
+	color: #eda72e;
+}
+ul.list-number-digit.digit-red li .jsn-listbullet {
+	color: #c14746;
+}
+ul.list-number-digit.digit-violet li .jsn-listbullet {
+	color: #8c4d81;
+}
+/* ----- HORIZONTAL LIST ----- */
+ul.list-horizontal {
+	margin: 0;
+	list-style: none;
+}
+ul.list-horizontal li {
+	display: inline;
+	margin: 0 .5em;
+}
+/* ----- NOBULLET LIST ----- */
+ul.list-nobullet {
+	margin: 0;
+	list-style: none;
+}
+ul.list-nobullet li {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+/* ============================== MENU ==============================
+/* ----- ICONS MENU STYLE ----- */
+div.jsn-modulecontainer ul.menu-iconmenu li i[class*="fa-"],
+h3.jsn-moduletitle span [class*="fa-"],
+.link-icon > i[class*="fa fa-"] {
+	display: inline-block;
+	line-height: 18px;
+	margin-right: 6px;
+	font-size: 18px;
+	color: #222;
+}
+div.jsn-modulecontainer ul.menu-iconmenu li.active i[class*="fa-"] {
+	color: #fff;
+}
+div.jsn-modulecontainer ul.menu-iconmenu li i[class*="fa-"],
+div.jsn-modulecontainer ul.menu-iconmenu > li > a > span {
+	float: left;
+}
+.menu-iconmenu li[class*="icon-"] > a > span,
+.menu-iconmenu li[class*="jsn-icon-"] > a > span {
+	padding-left: 24px;
+	background-image:url(../images/icons/icons-uni.png);
+}
+.menu-mainmenu.menu-iconmenu li[class*="icon-"].active > a > span,
+.menu-mainmenu.menu-iconmenu li[class*="jsn-icon-"].active > a > span {
+	padding-left: 24px;
+	background-image:url(../images/icons/icons-uni-white.png);
+}
+.menu-topmenu li[class*="icon-"] > a > span,
+.menu-topmenu li[class*="jsn-icon-"] > a > span {
+	background-image:url(../images/icons/icons-uni-white.png);
+}
+.jsn-menu-toggle {
+	display: none;
+}
+/* =============== MENU - MAIN MENU =============== */
+/* ----- GENERAL ----- */
+.jsn-menu-toggle,
+.jsn-menu-mobile-control {
+	display: none;
+}
+ul.menu-mainmenu.jsn-desktop-on-mobile ul {
+	display: none;
+}
+ul.menu-mainmenu.jsn-desktop-on-mobile li:hover > ul {
+	display: block;
+}
+/* ----- ICON MENU STYLE ----- */
+div.jsn-modulecontainer ul.menu-mainmenu.menu-iconmenu > li > a > span {
+	line-height: 19px;
+}
+/* ----- 1st LEVEL ----- */
+div.jsn-modulecontainer ul.menu-mainmenu ul {
+	left: auto;
+}
+#jsn-header_inner.jsn-menu-sticky {
+	transition: padding all 0.3s ease 0s;
+	-moz-transition: padding all 0.3s ease 0s;
+	-webkit-transition: padding all 0.3s ease 0s;
+}
+#jsn-header_inner.jsn-menu-sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+/* ========= MENU - FLIPBACK ========= */
+div.jsn-modulecontainer ul.menu-mainmenu li.jsn-submenu-flipback > ul {
+	right: 0;
+}
+div.jsn-modulecontainer ul.menu-mainmenu li.jsn-submenu-flipback a {
+	text-align: right;
+}
+div.jsn-modulecontainer ul.menu-mainmenu li.jsn-submenu-flipback ul li.parent > a {
+    background-image: url("../images/icons/icon-arrow-black-rtl.png");
+    background-position: 2% center;
+}
+div.jsn-modulecontainer ul.menu-mainmenu li.jsn-submenu-flipback ul ul {
+    right: 200px;
+    margin-left: 0;
+}
+ul.menu-mainmenu > li.jsn-submenu-flipback > ul:after {
+	right: 30px;
+	left: auto;
+}
+/* =============== MENU - TREE MENU =============== */
+div.jsn-modulecontainer ul.menu-treemenu > li > a:hover,
+div.jsn-modulecontainer ul.menu-sidemenu li a:hover,
+div.jsn-modulecontainer ul.menu-mainmenu li ul li a:hover {
+	padding-left:10px;
+}
+div[class*="solid-"] ul.menu-treemenu li a {
+	color:#fff;
+}
+ul.menu-treemenu li > a > span {
+	padding-left: 24px;
+	background: url(../images/icons/icons-base.png) left -341px no-repeat;
+}
+div[class*="solid-2"] ul.menu-treemenu li > a > span {
+	background: url(../images/icons/icons-base.png) left -766px no-repeat;
+}
+/* ----- ICON MENU STYLE ----- */
+div.jsn-modulecontainer ul.menu-treemenu.menu-iconmenu > li > a > span {
+	line-height: 16px;
+}
+/* ----- RICH MENU STYLE ----- */
+div.jsn-modulecontainer ul.menu-treemenu.menu-richmenu.menu-iconmenu > li > a span {
+	line-height: 1.5;
+}
+/* ----- CURRENT / HOVER STATE ----- */
+div[class*="solid-"]solid- ul.menu-treemenu li a.current {
+	font-weight:bold;
+}
+/* =============== MENU - SIDE MENU =============== */
+/* ----- GENERAL ----- */
+div.jsn-modulecontainer ul.menu-sidemenu,
+div.jsn-modulecontainer ul.menu-sidemenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+div.jsn-modulecontainer ul.menu-sidemenu li {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+div.jsn-modulecontainer ul.menu-sidemenu li ul {
+	position: absolute;
+	top: 0;
+}
+div.jsn-modulecontainer ul.menu-sidemenu > li {
+	border-bottom: 1px dotted #b3b3b3;
+}
+div.jsn-modulecontainer ul.menu-sidemenu > li.last {
+	border-bottom:none;
+}
+div.jsn-modulecontainer ul.menu-sidemenu li a {
+	display: block;
+	color: #404040;
+	cursor: pointer;
+	padding: 8px 0;
+	text-decoration: none;
+}
+div.jsn-modulecontainer ul.menu-sidemenu > li.parent > a {
+	padding-right: 16px;
+	background: url(../images/icons/icon-arrow-black.png) 98% center no-repeat;
+}
+div[class*="solid-"] ul.menu-sidemenu > li.parent > a {
+	background: url(../images/icons/icon-arrow-white.png) 98% center no-repeat;
+}
+div[class*="solid-"] ul.menu-sidemenu > li:hover > a,
+div[class*="solid-"] ul.menu-sidemenu > li > a {
+	color: #fff;
+}
+ul.menu-sidemenu li > a > span {
+	display: block;
+}
+ul.menu-sidemenu > li > a > span {
+	padding-left: 24px;
+	background: url(../images/icons/icons-base.png) left -340px no-repeat;
+}
+div.jsn-modulecontainer ul.menu-sidemenu ul {
+	visibility: hidden;
+	visibility: visible\9;
+	display: none\9;
+}
+div.jsn-modulecontainer ul.menu-sidemenu li:hover > ul {
+	visibility: visible;
+	display: block\9;
+}
+/* ----- ICON MENU STYLE ----- */
+div.jsn-modulecontainer ul.menu-sidemenu.menu-iconmenu > li > a > span {
+	line-height: 16px;
+}
+/* ----- RICH MENU STYLE ----- */
+div.jsn-modulecontainer ul.menu-sidemenu li a span.jsn-menudescription {
+	display: none;
+}
+div.jsn-modulecontainer ul.menu-sidemenu.menu-richmenu li a span.jsn-menudescription {
+	color: #999;
+	display: block;
+}
+div.solid-2 ul.menu-sidemenu.menu-richmenu li a span.jsn-menudescription {
+	color:#fff;
+}
+div.jsn-modulecontainer ul.menu-sidemenu.menu-richmenu.menu-iconmenu > li > a span {
+	line-height: 1.5;
+}
+/* ---------- 1st LEVEL ---------- */
+div.jsn-modulecontainer ul.menu-sidemenu ul {
+	top: 0;
+	position: absolute;
+	background:#fff;
+}
+div.jsn-modulecontainer ul.menu-sidemenu ul li a {
+	color: #333;
+	display: block;
+	cursor: pointer;
+	border-bottom:1px dotted #b2b2b2;
+	margin:0 10px;
+}
+div.jsn-modulecontainer ul.menu-sidemenu ul li.last a {
+	border-bottom:none;
+}
+div.jsn-modulecontainer ul.menu-sidemenu ul li:hover {
+	border-color:#333;
+}
+div.jsn-modulecontainer ul.menu-sidemenu ul li.parent > a {
+	padding-right: 16px;
+	background: url(../images/icons/icon-arrow-black.png) 98% center no-repeat;
+}
+div.jsn-modulecontainer ul.menu-sidemenu ul ul {
+	top: 0;
+}
+/* ----- PARENT ITEMS / ADD ARROW TO ITEMS HAVE SUBLEVEL ----- */
+/* 1st LEVEL */
+/* 1st LEVEL - CUSTOM MODULE */
+div[class*="richbox-"] ul.menu-sidemenu > li.parent > a {
+	background: url(../images/icons/icon-arrow-black.png) 98% center no-repeat;
+}
+/* ----- ACTIVE STATE ----- */
+div.jsn-modulecontainer ul.menu-sidemenu li.active > a {
+	font-weight: bold;
+}
+/* ----- ACTIVE STATE IN SPECIFIC MODULE BOXES ----- */
+div[class*="solid-"] ul.menu-sidemenu > li.active > a {
+	text-shadow:0 0 10px #fff;
+}
+/* ----- ROLLOVER STATE / DISPLAY SUB-MENU OF SELECTED MENU ITEM ----- */
+div.jsn-modulecontainer ul.menu-sidemenu li:hover > ul {
+	left: auto;
+}
+/* =============== MENU - TOP MENU =============== */
+/* ----- ICON MENU STYLE ----- */
+div.jsn-modulecontainer ul.menu-topmenu.menu-iconmenu > li > a {
+	line-height: 16px;
+	font-size:0.9em;
+}
+/* ============================== MOBILE SWITCH ============================== */
+#jsn-mobileswitch {
+	display: none;
+	padding: 10px;
+	float: right;
+	background-color: #222;
+	position:fixed;
+	right: 0;
+	top: 100px;
+	z-index: 998;
+}
+#jsn-header_inner.jsn-menu-sticky #jsn-mobileswitch {
+	top: 68px;
+}
+#jsn-mobileswitch a {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	vertical-align: middle;
+	background: url("../images/icons/icons-mobile.png") -16px 0 no-repeat;
+}
+#jsn-desktopswitch {
+	display: none;
+	padding: 9px 10px;
+	float: right;
+}
+#jsn-desktopswitch a {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	vertical-align: middle;
+	background: url("../images/icons/icons-mobile.png") -32px 0 no-repeat;
+}
+@media only screen and (max-device-width: 960px) {
+	body.jsn-mobile #jsn-desktopswitch {
+		display: block;
+	}
+	body.jsn-desktop #jsn-mobileswitch {
+		display: block;
+	}
+	body.jsn-desktop-on-mobile {
+		-webkit-text-size-adjust: none;
+	}
+	/* Fix Hover Event on touch mobile devices */
+	ul.menu-mainmenu li ul,
+ 	ul.menu-sidemenu li ul {
+		transition: none !important;
+		-moz-transition: none !important;
+		-webkit-transition: none !important;
+		-ms-transition: none !important;
+		-o-transition: none !important;
+	}
+}
+/* ============================== SITE TOOLS ============================== */
+/* =============== SITE TOOLS - GENERAL PRESENTATION =============== */
+#jsn-sitetoolspanel {
+	position:fixed;
+	right:0;
+	top:37px;
+	background:#fff;
+	z-index:999;
+}
+. ie10 #jsn-sitetoolspanel {
+	right: 10px;
+}
+#jsn-header_inner.jsn-menu-sticky #jsn-sitetoolspanel {
+	top: 5px;
+}
+/* ----- DROP DOWN ----- */
+ul#jsn-sitetools-menu,
+ul#jsn-sitetools-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+ul#jsn-sitetools-menu li {
+	padding: 0;
+	margin: 0;
+	background: url(../images/icons/icons-uni.png) center -1360px no-repeat;
+}
+.jsn-color-grey ul#jsn-sitetools-menu > li:hover {
+	background:url(../images/icons/icons-uni-white.png) center -1360px no-repeat #999 !important;
+}
+.jsn-color-blue ul#jsn-sitetools-menu > li:hover {
+	background:url(../images/icons/icons-uni-white.png) center -1360px no-repeat #02a4e4 !important;
+}
+.jsn-color-red ul#jsn-sitetools-menu > li:hover {
+	background:url(../images/icons/icons-uni-white.png) center -1360px no-repeat #c14746 !important;
+}
+.jsn-color-green ul#jsn-sitetools-menu > li:hover {
+	background:url(../images/icons/icons-uni-white.png) center -1360px no-repeat #7fc348 !important;
+}
+.jsn-color-violet ul#jsn-sitetools-menu > li:hover {
+	background:url(../images/icons/icons-uni-white.png) center -1360px no-repeat #8c4d81 !important;
+}
+.jsn-color-orange ul#jsn-sitetools-menu > li:hover {
+	background:url(../images/icons/icons-uni-white.png) center -1360px no-repeat #eda72e !important;
+}
+ul#jsn-sitetools-menu li a {
+	margin: 0;
+	padding: 0;
+	width: 36px;
+	height: 36px;
+	display: block;
+}
+ul#jsn-sitetools-menu li ul {
+	z-index: 90;
+	right: 0;
+	width:144px;
+	position: absolute;
+	visibility: hidden;
+	visibility: visible\9;
+	display: none\9;
+}
+ul#jsn-sitetools-menu li:hover ul {
+	visibility: visible;
+	display: block\9;
+}
+ul#jsn-sitetools-menu.sitetool-desktop-on-mobile li ul {
+	display: none;
+}
+ul#jsn-sitetools-menu.sitetool-desktop-on-mobile li:hover ul {
+	display: block;
+}
+ul#jsn-sitetools-menu ul li {
+	padding: 3px 6px;
+	background: none;
+}
+ul#jsn-sitetools-menu ul li a {
+	float: left;
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+}
+ul#jsn-sitetools-menu li ul li, ul#jsn-sitetools-inline li ul li{
+	float: right;
+}
+ul#jsn-sitetools-menu li ul li.jsn-color1, ul#jsn-sitetools-inline li ul li.jsn-color1{
+	width: 20px;
+}
+ul#jsn-sitetools-menu li ul li.jsn-color2,ul#jsn-sitetools-inline li ul li.jsn-color2{
+	width: 45px;
+}
+ul#jsn-sitetools-menu li ul li.jsn-color3,ul#jsn-sitetools-inline li ul li.jsn-color3{
+	width: 66px;
+}
+ul#jsn-sitetools-menu li ul li.jsn-color4, ul#jsn-sitetools-inline li ul li.jsn-color4{
+	width: 90px;
+}
+ul#jsn-sitetools-menu li ul li.jsn-color5,ul#jsn-sitetools-inline li ul li.jsn-color5{
+	width: 110px;
+}
+ul#jsn-sitetools-menu li ul li.jsn-color6,ul#jsn-sitetools-inline li ul li.jsn-color6{
+	width: 145px;
+}
+/* ----- INLINE ROW ----- */
+ul#jsn-sitetools-inline {
+	margin: 0;
+	float: left;
+	padding: 0;
+	list-style: none;
+	position:fixed;
+	right:0;
+	top: 35px;
+}
+ul#jsn-sitetools-inline ul {
+	float: left;
+	margin:6px 7px 6px 10px;
+}
+ul#jsn-sitetools-inline li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background:#fff;
+}
+ul#jsn-sitetools-inline li a {
+	float: left;
+	width: 22px;
+	height: 20px;
+}
+ul#jsn-sitetools-inline > li > a {
+	float: none;
+}
+
+/* =============== SITE TOOLS - COLOR SELECTOR =============== */
+#jsn-selector-blue,
+#jsn-selector-red,
+#jsn-selector-green,
+#jsn-selector-violet,
+#jsn-selector-orange,
+#jsn-selector-grey,
+#jsn-selector-blue.current,
+#jsn-selector-blue:hover,
+#jsn-selector-red.current,
+#jsn-selector-red:hover,
+#jsn-selector-green.current,
+#jsn-selector-green:hover,
+#jsn-selector-violet.current,
+#jsn-selector-violet:hover,
+#jsn-selector-orange.current,
+#jsn-selector-orange:hover,
+#jsn-selector-grey.current,
+#jsn-selector-grey:hover {
+	background-image: url(../images/icons/icons-sitetools-color.png);
+	background-repeat: no-repeat;
+}
+#jsn-selector-blue {
+	background-position: -20px 0;
+}
+#jsn-selector-red {
+	background-position: -40px 0;
+}
+#jsn-selector-green {
+	background-position: -60px 0;
+}
+#jsn-selector-violet {
+	background-position: -80px 0;
+}
+#jsn-selector-orange {
+	background-position: -100px 0;
+}
+#jsn-selector-grey {
+	background-position: -120px 0;
+}
+#jsn-selector-blue.current,
+#jsn-selector-blue:hover {
+	background-position: -20px -20px;
+}
+#jsn-selector-red.current,
+#jsn-selector-red:hover {
+	background-position: -40px -20px;
+}
+#jsn-selector-green.current,
+#jsn-selector-green:hover {
+	background-position: -60px -20px;
+}
+#jsn-selector-violet.current,
+#jsn-selector-violet:hover {
+	background-position: -80px -20px;
+}
+#jsn-selector-orange.current,
+#jsn-selector-orange:hover {
+	background-position: -100px -20px;
+}
+#jsn-selector-grey.current,
+#jsn-selector-grey:hover {
+	background-position: -120px -20px;
+}
+/* =============== MODULE STYLES - MODULE BOXES =============== */
+/* ----- GENERAL MODULE STYLES ----- */
+div[class*="solid-"] div.jsn-modulecontainer_inner{
+	padding: 10px;
+}
+/* ----- SOLIDBOX STYLE ----- */
+div.solid-1 div.jsn-modulecontainer_inner {
+	background: #373737;
+	color:#c0c0c0;
+}
+div.solid-1 div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	border-bottom:1px solid #5f5f5f;
+}
+div.solid-1 div.jsn-modulecontainer_inner h3.jsn-moduletitle,
+div.solid-2 div.jsn-modulecontainer_inner h3.jsn-moduletitle,
+div[class*="solid-"] div.jsn-modulecontainer_inner a {
+	color:#fff;
+}
+div[class*="solid-"] div.jsn-modulecontainer_inner a {
+	text-decoration:underline;
+}
+div[class*="solid-"] div.jsn-modulecontainer_inner a.link-action:hover {
+	background:#fff;
+	color:#333;
+	text-decoration:none;
+}
+/* ----- LIGHTBOX STYLE ----- */
+div.lightbox-1 div.jsn-modulecontainer_inner
+div.lightbox-2 div.jsn-modulecontainer_inner {
+	background: #fff;
+}
+div[class*="box-1"] div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	border-bottom:1px solid #ccc;
+}
+div[class*="box-2"] div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	background: url(../images/module-styles/title-lightbox2.png) left bottom repeat-x;
+	padding-bottom:10px;
+}
+/* =============== MODULE STYLES - MODULE ICONS =============== */
+div[class*="icon-"] h3.jsn-moduletitle span.jsn-moduleicon,
+div[class*="jsn-icon-"] h3.jsn-moduletitle span.jsn-moduleicon {
+	padding-left: 24px;
+	line-height:22px;
+	height: 18px;
+}
+/* =============== JOOMLA! EXTENSIONS - MOD_STATISTICS =============== */
+dl.stats-module dt {
+	float: left;
+	width: 65%;
+}
+dl.stats-module dd {
+	margin: 0;
+}
+/* ============================== MISC ============================== */
+/* =============== GENERAL ICON ASSIGN
+MENT =============== */
+[class*="solid-"][class*="jsn-icon-"] h3.jsn-moduletitle span.jsn-moduleicon,
+.link-button .link-icon[class*="icon-"]{
+	background-image:url(../images/icons/icons-uni-white.png);
+}
+.link-icon[class*="icon-"],
+.link-button.button-light .link-icon[class*="icon-"],
+.menu-iconmenu [class*="icon-"] > a > span,
+.menu-treemenu.menu-iconmenu [class*="icon-"] > a > span,
+.list-icon[class*="icon-"] li .jsn-listbullet,
+[class*="icon-"] h3.jsn-moduletitle span.jsn-moduleicon,
+.menu-treemenu.menu-iconmenu [class*="icon-"] > a:hover > span,
+div.richbox-1[class*="icon-"] h3.jsn-moduletitle span.jsn-moduleicon,
+div[class*="richbox-"] .menu-iconmenu [class*="icon-"] > a:hover > span,
+div.lightbox-2 .menu-iconmenu [class*="icon-"] > a:hover > span {
+	background-image: url(../images/icons/icons-uni.png);
+	background-repeat: no-repeat;
+}
+div[class*="solid-"] .menu-iconmenu [class*="icon-"] > a > span{
+	background-image: url(../images/icons/icons-uni-white.png) !important;
+}
+.link-icon.jsn-icon-article,
+.menu-iconmenu .jsn-icon-article > a > span,
+.list-icon.jsn-icon-article li .jsn-listbullet,
+.jsn-icon-article h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 3px !important;
+}
+.link-icon.jsn-icon-calendar,
+.menu-iconmenu .jsn-icon-calendar > a > span,
+.list-icon.jsn-icon-calendar li .jsn-listbullet,
+.jsn-icon-calendar h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -78px !important;
+}
+.link-icon.jsn-icon-cart,
+.menu-iconmenu .jsn-icon-cart > a > span,
+.list-icon.jsn-icon-cart li .jsn-listbullet,
+.jsn-icon-cart h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -166px !important;
+}
+.link-icon.jsn-icon-comment,
+.menu-iconmenu .jsn-icon-comment > a > span,
+.list-icon.jsn-icon-comment li .jsn-listbullet,
+.jsn-icon-comment h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -252px !important;
+}
+.link-icon.jsn-icon-display,
+.menu-iconmenu .jsn-icon-display > a > span,
+.list-icon.jsn-icon-display li .jsn-listbullet,
+.jsn-icon-display h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -338px !important;
+}
+.link-icon.jsn-icon-download,
+.menu-iconmenu .jsn-icon-download > a > span,
+.list-icon.jsn-icon-download li .jsn-listbullet,
+.jsn-icon-download h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -422px !important;
+}
+.link-icon.jsn-icon-folder,
+.menu-iconmenu .jsn-icon-folder > a > span,
+.list-icon.jsn-icon-folder li .jsn-listbullet,
+.jsn-icon-folder h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -509px !important;
+}
+.link-icon.jsn-icon-help,
+.menu-iconmenu .jsn-icon-help > a > span,
+.list-icon.jsn-icon-help li .jsn-listbullet,
+.jsn-icon-help h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -594px !important;
+}
+.link-icon.jsn-icon-home,
+.menu-iconmenu .jsn-icon-home > a > span,
+.list-icon.jsn-icon-home li .jsn-listbullet,
+.jsn-icon-home h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -681px !important;
+}
+.link-icon.jsn-icon-image,
+.menu-iconmenu .jsn-icon-image > a > span,
+.list-icon.jsn-icon-image li .jsn-listbullet,
+.jsn-icon-image h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -767px !important;
+}
+.link-icon.jsn-icon-info,
+.menu-iconmenu .jsn-icon-info > a > span,
+.list-icon.jsn-icon-info li .jsn-listbullet,
+.jsn-icon-info h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -853px !important;
+}
+.link-icon.jsn-icon-mail,
+.menu-iconmenu .jsn-icon-mail > a > span,
+.list-icon.jsn-icon-mail li .jsn-listbullet,
+.jsn-icon-mail h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -938px !important;
+}
+.link-icon.jsn-icon-online,
+.menu-iconmenu .jsn-icon-online > a > span,
+.list-icon.jsn-icon-online li .jsn-listbullet,
+.jsn-icon-online h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -1024px !important;
+}
+.link-icon.jsn-icon-rss,
+.menu-iconmenu .jsn-icon-rss > a > span,
+.list-icon.jsn-icon-rss li .jsn-listbullet,
+.jsn-icon-rss h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -1111px !important;
+}
+.link-icon.jsn-icon-search,
+.menu-iconmenu .jsn-icon-search > a > span,
+.list-icon.jsn-icon-search li .jsn-listbullet,
+.jsn-icon-search h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -1198px !important;
+}
+.link-icon.jsn-icon-selection,
+.menu-iconmenu .jsn-icon-selection > a > span,
+.list-icon.jsn-icon-selection li .jsn-listbullet,
+.jsn-icon-selection h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -1283px !important;
+}
+.link-icon.jsn-icon-settings,
+.menu-iconmenu .jsn-icon-settings > a > span,
+.list-icon.jsn-icon-settings li .jsn-listbullet,
+.jsn-icon-settings h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -1369px !important;
+}
+.link-icon.jsn-icon-star,
+.menu-iconmenu .jsn-icon-star > a > span,
+.list-icon.jsn-icon-star li .jsn-listbullet,
+.jsn-icon-star h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -1455px !important;
+}
+.link-icon.jsn-icon-statistics,
+.menu-iconmenu .jsn-icon-statistics > a > span,
+.list-icon.jsn-icon-statistics li .jsn-listbullet,
+.jsn-icon-statistics h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -1539px !important;
+}
+.link-icon.jsn-icon-user,
+.menu-iconmenu .jsn-icon-user > a > span,
+.list-icon.jsn-icon-user li .jsn-listbullet,
+.jsn-icon-user h3.jsn-moduletitle span.jsn-moduleicon {
+	background-position: 0 -1628px !important;
+}
+/* ============================== JOOMLA 3.0 CORE COMPONENT LAYOUT ============================== */
+.jsn-joomla-30 .blog-featured .items-leading h2 {
+	padding: 5px 0;
+}
+/* PAGE PAGINATION */
+
+body.jsn-color-blue ul.jsn-pagination li.navigation-page span {
+    background-color: #02A4E4;
+}
+body.jsn-color-red ul.jsn-pagination li.navigation-page span {
+	background-color: #C14746;
+}
+body.jsn-color-violet ul.jsn-pagination li.navigation-page span {
+	background-color: #8C4D81;
+}
+body.jsn-color-green ul.jsn-pagination li.navigation-page span {
+	background-color: #7FC348;
+}
+body.jsn-color-orange ul.jsn-pagination li.navigation-page span {
+	background-color: #EDA72E;
+}
+body.jsn-color-grey ul.jsn-pagination li.navigation-page span {
+	background-color: #999;
+}
+/* ============================== CSS3 EFFECTS ============================== */
+/* ----- READ MORE ----- */
+.readon {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+	background-image:linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(216,216,216) 100%);
+	background-image:-moz-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(216,216,216) 100%);
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(255,255,255)),color-stop(1, rgb(216,216,216)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(216,216,216) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(216,216,216) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(216,216,216) 100%);
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffd8d8d8,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffd8d8d8,GradientType=0);
+}
+.readon:hover {
+	box-shadow: 0 0 3px #333;
+	-moz-box-shadow: 0 0 3px #333;
+	-webkit-box-shadow: 0 0 3px #333;
+}
+/* ----- GO TOP LINK ----- */
+#jsn-gotoplink {
+	transition: color 0.3s linear, background 0.3s ease-out;
+	-moz-transition: color 0.3s linear, background 0.3s ease-out;
+	-webkit-transition: color 0.3s linear, background 0.3s ease-out;
+}
+/* ----- TYPOGRAPHY STYLE ----- */
+/* TEXT STYLES */
+#jsn-pos-breadcrumbs,
+#jsn-pos-content-top.jsn-modulescontainer div.jsn-modulecontainer_inner {
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+}
+#jsn-content-bottom {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.13) inset;
+}
+.text-box {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 2px #999;
+	-moz-box-shadow: 0 0 2px #999;
+	-webkit-box-shadow: 0 0 2px #999;
+}
+.text-box-highlight {
+	transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+}
+.text-box-highlight:hover {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 2px #999;
+	-moz-box-shadow: 0 0 2px #999;
+	-webkit-box-shadow: 0 0 2px #999;
+}
+.text-highlight {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+/* LINK STYLES */
+.link-button {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: none\9;
+}
+.link-button,
+.link-button a {
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+}
+.link-button:hover,
+.link-button a:hover {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+.link-action,
+#jsn-footer a {
+	transition: color 0.3s linear, background 0.3s ease-out;
+	-moz-transition: color 0.3s linear, background 0.3s ease-out;
+	-webkit-transition: color 0.3s linear, background 0.3s ease-out;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+}
+.link-highlight {
+	transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+}
+.link-highlight:hover {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 2px #999;
+	-moz-box-shadow: 0 0 2px #999;
+	-webkit-box-shadow: 0 0 2px #999;
+}
+#jsn-pos-top ul.menu-topmenu li {
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+}
+#jsn-pos-top ul.menu-topmenu li:hover {
+	background:rgba(255,255,255,0.3);
+}
+.link-button.button-light{
+	text-shadow: 0 1px 0 #fff !important;
+	border-color: #999999;
+	background: #f4f4f4;
+	background-image:linear-gradient(-90deg,rgb(244,244,244) 0%,rgb(216,216,216) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(244,244,244) 0%,rgb(216,216,216) 100%);
+	background-image:-moz-linear-gradient(-90deg,rgb(244,244,244) 0%,rgb(216,216,216) 100%);
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(244,244,244)),color-stop(1, rgb(216,216,216)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(244,244,244) 0%,rgb(216,216,216) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(244,244,244) 0%,rgb(216,216,216) 100%);
+}
+.link-button.button-dark {
+	background: #4b4b4b;
+	background:linear-gradient(-90deg,#4b4b4b 0%,#1a1a1a 100%);
+	background:-o-linear-gradient(-90deg,#4b4b4b 0%,#1a1a1a 100%);
+	background:-moz-linear-gradient(-90deg,#4b4b4b 0%,#1a1a1a 100%);
+	background:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, #4b4b4b),color-stop(1, #1a1a1a));
+	background:-webkit-linear-gradient(-90deg,#4b4b4b 0%,#1a1a1a 100%);
+	background:-ms-linear-gradient(-90deg,#4b4b4b 0%,#1a1a1a 100%);
+}
+.link-button.button-green {
+	background: #5C8621;
+	background-image:linear-gradient(-90deg,rgb(92,134,33) 0%,rgb(72,105,27) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(92,134,33) 0%,rgb(72,105,27) 100%);
+	background-image:-moz-linear-gradient(-90deg,rgb(92,134,33) 0%,rgb(72,105,27) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(92,134,33) 0%,rgb(72,105,27) 100%);
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(92,134,33)),color-stop(1, rgb(72,105,27)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(92,134,33) 0%,rgb(72,105,27) 100%);
+	background-image:-webkit-linear-gradient(-90deg,rgb(92,134,33) 0%,rgb(72,105,27) 100%);
+}
+.link-button.button-orange {
+	background: #C4701C;
+	background-image:linear-gradient(-90deg,rgb(196,112,28) 0%,rgb(160,91,23) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(196,112,28) 0%,rgb(160,91,23) 100%);
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(196,112,28) 0%,rgb(160,91,23) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(196,112,28) 0%,rgb(160,91,23) 100%);
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(196,112,28)),color-stop(1, rgb(160,91,23)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(196,112,28) 0%,rgb(160,91,23) 100%);
+}
+.link-button.button-blue {
+	background: #3A77AD;
+	background-image:linear-gradient(-90deg,rgb(58,119,173) 0%,rgb(44,89,131) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(58,119,173) 0%,rgb(44,89,131) 100%);
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(58,119,173) 0%,rgb(44,89,131) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(58,119,173) 0%,rgb(44,89,131) 100%);
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(58,119,173)),color-stop(1, rgb(44,89,131)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(58,119,173) 0%,rgb(44,89,131) 100%);
+}
+.link-button.button-red {
+	background: #8C2323;
+	background-image:linear-gradient(-90deg,rgb(140,35,35) 0%,rgb(112,29,29) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(140,35,35) 0%,rgb(112,29,29) 100%);
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(140,35,35) 0%,rgb(112,29,29) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(140,35,35) 0%,rgb(112,29,29) 100%);
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(140,35,35)),color-stop(1, rgb(112,29,29)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(140,35,35) 0%,rgb(112,29,29) 100%);
+}
+/* TABLE STYLES */
+table.table-style th,
+table.table-style td {
+	transition: background 0.3s ease-out;
+	-moz-transition: background 0.3s ease-out;
+	-webkit-transition: background 0.3s ease-out;
+}
+/* LIST STYLES */
+ul.list-number-bullet li .jsn-listbullet {
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+ul.list-number-bullet.bullet-blue li .jsn-listbullet {
+	background:#02a4e4
+}
+ul.list-number-bullet.bullet-green li .jsn-listbullet {
+	background:#7fc348;
+}
+ul.list-number-bullet.bullet-grey li .jsn-listbullet {
+	background:#6a6a6a;
+}
+ul.list-number-bullet.bullet-orange li .jsn-listbullet {
+	background:#eda72e;
+}
+ul.list-number-bullet.bullet-red li .jsn-listbullet {
+	background:#c14746
+}
+ul.list-number-bullet.bullet-violet li .jsn-listbullet {
+	background:#8c4d81;
+}
+/* FORM STYLE */
+.inputbox {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	transition: color 0.1s linear, background 0.3s ease-out, border-color 0.3s;
+	-moz-transition: color 0.1s linear, background 0.3s ease-out, border-color 0.3s;
+	-webkit-transition: color 0.1s linear, background 0.3s ease-out, border-color 0.3s;
+}
+#jsn-page .button {
+	background-image: -ms-linear-gradient(top, #999, #777);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999), to(#777));
+	background-image: -webkit-linear-gradient(top, #999, #777);
+	background-image: -o-linear-gradient(top, #999, #777);
+	background-image: linear-gradient(top, #999, #777);
+	background-image: -moz-linear-gradient(top, #999, #777);
+	background-repeat: repeat-x;
+	border: 1px solid #000;
+	*border: 0;
+	border-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4);
+	-webkit-border-radius: 3px;
+	 -moz-border-radius: 3px;
+		  border-radius: 3px;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#999', endColorstr='#777', GradientType=0);
+	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+	*zoom: 1;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	 -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+		  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	transition: color 0.1s linear, background 0.3s ease-out;
+	-moz-transition: color 0.1s linear, background 0.3s ease-out;
+	-webkit-transition: color 0.1s linear, background 0.3s ease-out;
+}
+.button:hover,
+.button:active {
+	background-image: -ms-linear-gradient(top, #777, #555);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#777), to(#555));
+	background-image: -webkit-linear-gradient(top, #777, #555);
+	background-image: -o-linear-gradient(top, #777, #555);
+	background-image: linear-gradient(top, #777, #555);
+	background-image: -moz-linear-gradient(top, #777, #555);
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#777', endColorstr='#555', GradientType=0);
+	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+	transition: color 0.1s linear, background 0.3s ease-out, background-position 0.3s;
+	-moz-transition: color 0.1s linear, background 0.3s ease-out, background-position 0.3s;
+	-webkit-transition: color 0.1s linear, background 0.3s ease-out, background-position 0.3s;
+}
+/* ----- MENU STYLES ----- */
+/* GENERAL */
+ul.menu-mainmenu li a,
+ul.menu-sidemenu li a,
+ul.menu-treemenu li a {
+	transition:all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+div.jsn-modulecontainer ul.menu-mainmenu > li.active > a {
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-o-border-radius:3px;
+	-ms-border-radius:3px;
+}
+div.jsn-modulecontainer ul.menu-sidemenu ul {
+	box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+	-o-box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+	-ms-box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+}
+div.jsn-modulecontainer ul.menu-sidemenu ul li {
+	transition: color 0.1s linear, background 0.3s ease-out;
+	-moz-transition: color 0.1s linear, background 0.3s ease-out;
+	-webkit-transition: color 0.1s linear, background 0.3s ease-out;
+}
+div[class*="solid-"] ul.menu-treemenu li a:hover,
+div[class*="solid-"] ul.menu-sidemenu li a:hover{
+	text-shadow:0 0 10px #fff
+}
+div[class*="solid-"] ul.menu-treemenu > li,
+div[class*="solid-"] ul.menu-sidemenu > li {
+	border-bottom:1px dotted rgba(255,255,255,0.5);
+}
+/* MAIN MENU - SIDE MENU */
+ul.menu-mainmenu li ul,
+ul.menu-sidemenu li ul {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+ul.menu-mainmenu li ul {
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+}
+ul.menu-mainmenu li:hover > ul,
+ul.menu-sidemenu li:hover > ul,
+#jsn-menu div.display-dropdown.jsn-modulecontainer .jsn-modulecontainer_inner:hover .jsn-modulecontent {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+/* ----- SITE TOOLS ----- */
+ul#jsn-sitetools-menu li ul {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	-ms-transition: all .3s;
+	transition: all .3s;
+}
+ul#jsn-sitetools-menu li:hover ul {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+ul#jsn-sitetools-menu li,
+#jsn-menu .jsn-modulecontainer.display-dropdown .jsn-modulecontainer_inner h3,
+#jsn-menu div.display-dropdown.jsn-modulecontainer .jsn-modulecontent {
+	transition: background 0.3s ease-out;
+	-moz-transition: background 0.3s ease-out;
+	-webkit-transition: background 0.3s ease-out;
+}
+#jsn-menu div.display-dropdown.jsn-modulecontainer .jsn-modulecontent {
+	box-shadow: 0 0 4px rgba(0,0,0,0.3)
+}
+/* ----- MODULE STYLES ----- */
+/* ----- OVERRIDE JOOMLA 30 ----- */
+.jsn-joomla-30 .calendar .button {
+	border-radius: none;
+	-moz-border-radius: none;
+	-webkit-border-radius: none;
+}
+div[class*="richbox-"] div.jsn-modulecontainer_inner {
+	box-shadow:0 0 3px rgba(0,0,0,0.2);
+	border:1px solid rgba(0,0,0,0.17);
+}
+div[class*="solid-"] div.jsn-modulecontainer_inner {
+	border:1px solid rgba(0,0,0,0.2);
+	border-bottom:3px solid rgba(0,0,0,0.2);
+	box-shadow:0 0 4px rgba(0, 0, 0, 0.5);
+}
+div[class*="solid-"] div.jsn-modulecontainer_inner a {
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+}
+#jsn-pos-content-bottom.jsn-modulescontainer div.jsn-modulecontainer_inner,
+#jsn-menu div.display-dropdown.jsn-modulecontainer .jsn-modulecontent {
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+}
+
+/*Show megamenu*/
+
+ul:not(.jsn-menu-mobile) .jsn-menu-mobile-control, .jsn-megamenu li.megamenu  .jsn-menu-mobile-control {
+	display: none !important;
+}
+
+.jsn-hasMegamenu .jsn-modulecontainer{
+	display: none;
+}
+
+.jsn-hasMegamenu .jsn-modulecontainer.jsn-megamenu {
+	display: block;
+}

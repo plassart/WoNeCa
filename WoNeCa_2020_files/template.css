@@ -1021,7 +1021,7 @@ div.jsn-modulecontainer ul.menu-mainmenu > li > a {
 	font-size: 1.1em;
 }
 div.jsn-modulecontainer ul.menu-mainmenu > li.parent {
-	background:url(../images/dropdown.png) no-repeat scroll 96% 14px transparent;
+	/*background:url(../images/dropdown.png) no-repeat scroll 96% 14px transparent;*/
 }
 div.jsn-modulecontainer ul.menu-mainmenu > li > a {
 	padding: 4px 15px;
@@ -1230,7 +1230,7 @@ h3.jsn-moduletitle {
 	margin: 0;
 	color: #000;
 	font-size: 1.2em;
-	padding-bottom: 5px;
+	padding-bottom: 0px;
 }
 h3.jsn-moduletitle span {
 	display: block;

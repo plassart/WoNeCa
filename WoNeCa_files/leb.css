@@ -1,0 +1,55 @@
+/* =============== DEFAULT HTML - HEADING STYLES =============== */
+h1 {
+	font-size: 1.7em;
+	color: #000;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: inherit;
+	color: #C14746;
+}
+h3 {
+	color: #8C4D81;
+	font-size: 1.4em;
+}
+h4 {
+	color: #02A4E4;
+	font-size: 1.3em;
+}
+h5, h6 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+h5 {
+	color: #7fc348;
+}
+h6 {
+	color: #999;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.5em 0;
+	font-weight: normal;
+}
+/* =============== DEFAULT HTML - LINK STYLES =============== */
+a {
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+a img {
+	border: none;
+}
+/* =============== DEFAULT HTML - LIST STYLES =============== */
+ul li {
+	padding: 0;
+	margin: 0.3em 0 0.3em 1.6em;
+}
+ol li {
+	padding: 0;
+	margin: 0.3em 0 0.3em 2em;
+}
